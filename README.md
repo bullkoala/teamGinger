@@ -4,4 +4,4 @@ Fuck it all
 
 ### What is this repository for? ###
 
-* Fucking fuck
+* Fuck you and the horse rode in on, that's what
