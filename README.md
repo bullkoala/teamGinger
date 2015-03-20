@@ -1,15 +1,5 @@
 # README #
 
-Fuck it all
-
-### What is this repository for? ###
-
-* Fuck you and the horse you rode in on, that's what
-
-# For the reals #
-
-[Online version of the Pro Git book](http://git-scm.com/book/en/v2)
-
 # Quick & dirty, like Branch #
 
 * HTTPS if you like typing in your password every time
@@ -164,3 +154,7 @@ Which does the following:
 ```git
 git remote rename origin MadRepsSon
 ```
+
+# For the reals #
+
+[Online version of the Pro Git book](http://git-scm.com/book/en/v2)
