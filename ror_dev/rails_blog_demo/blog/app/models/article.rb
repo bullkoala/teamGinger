@@ -1,2 +1,3 @@
 class Article < ActiveRecord::Base
-end
+	validates :title, presence: true, length: { minimum: 5}
+end #Article
