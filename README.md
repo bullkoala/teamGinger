@@ -14,24 +14,18 @@ Fuck it all
 
 * HTTPS if you like typing in your password every time
 
-'''
-git clone https://github.com/bullkoala/teamGinger.git
-'''
-
+	$ git clone https://github.com/bullkoala/teamGinger.git
 
 * Or if you're lazy like I am and you've set up SSH:
-'''
-#!git
-git clone git@github.com:bullkoala/teamGinger.git
 
+	$ git clone git@github.com:bullkoala/teamGinger.git
 
-git checkout --track origin/master
+	$ git checkout --track origin/master
 
-git checkout --track origin/testing
+	$ git checkout --track origin/testing
 
+	$ git checkout dev
 
-git checkout dev
-'''
 
 * 'Splainin:
    * Clone the repo to your local machine. It defaults to the dev branch, and
