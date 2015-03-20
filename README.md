@@ -13,8 +13,8 @@ Fuck it all
 # Quick & dirty, like Branch #
 
 * HTTPS if you like typing in your password every time
+
 '''
-#!git
 git clone https://github.com/bullkoala/teamGinger.git
 '''
 
