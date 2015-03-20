@@ -20,12 +20,12 @@ Fuck it all
 
 * Or if you're lazy like I am and you've set up SSH:
 
-'''
+```
 $ git clone git@github.com:bullkoala/teamGinger.git
 $ git checkout --track origin/master
 $ git checkout --track origin/testing
 $ git checkout dev
-'''
+```
 
 * 'Splainin:
    * Clone the repo to your local machine. It defaults to the dev branch, and
