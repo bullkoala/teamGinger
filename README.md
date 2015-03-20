@@ -16,7 +16,7 @@ Fuck it all
 
 ```git
 $ git clone https://github.com/bullkoala/teamGinger.git
-'''
+```
 
 * Or if you're lazy like I am and you've set up SSH:
 
