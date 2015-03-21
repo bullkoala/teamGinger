@@ -1,0 +1,41 @@
+<%= form_for(@sensei) do |f| %>
+  <% if @sensei.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sensei.errors.count, "error") %> prohibited this sensei from being saved:</h2>
+
+      <ul>
+      <% @sensei.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :typeID %><br>
+    <%= f.number_field :typeID %>
+  </div>
+  <div class="field">
+    <%= f.label :provinceStrength %><br>
+    <%= f.number_field :provinceStrength %>
+  </div>
+  <div class="field">
+    <%= f.label :goldProduction %><br>
+    <%= f.number_field :goldProduction %>
+  </div>
+  <div class="field">
+    <%= f.label :familyHonor %><br>
+    <%= f.number_field :familyHonor %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br>
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

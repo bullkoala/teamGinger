@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @act.typeID %>
+</p>
+
+<p>
+  <strong>Goldcost:</strong>
+  <%= @act.goldCost %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @act.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @act.description %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @act.focus %>
+</p>
+
+<%= link_to 'Edit', edit_act_path(@act) %> |
+<%= link_to 'Back', acts_path %>

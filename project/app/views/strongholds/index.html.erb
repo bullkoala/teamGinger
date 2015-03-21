@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Strongholds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typeid</th>
+      <th>Provincestrength</th>
+      <th>Familyhonor</th>
+      <th>Goldproduction</th>
+      <th>Keywords</th>
+      <th>Description</th>
+      <th>Clan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @strongholds.each do |stronghold| %>
+      <tr>
+        <td><%= stronghold.typeID %></td>
+        <td><%= stronghold.provinceStrength %></td>
+        <td><%= stronghold.familyHonor %></td>
+        <td><%= stronghold.goldProduction %></td>
+        <td><%= stronghold.keywords %></td>
+        <td><%= stronghold.description %></td>
+        <td><%= stronghold.clan %></td>
+        <td><%= link_to 'Show', stronghold %></td>
+        <td><%= link_to 'Edit', edit_stronghold_path(stronghold) %></td>
+        <td><%= link_to 'Destroy', stronghold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stronghold', new_stronghold_path %>
