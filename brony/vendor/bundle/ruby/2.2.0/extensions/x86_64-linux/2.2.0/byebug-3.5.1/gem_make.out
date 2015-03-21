@@ -1,0 +1,15 @@
+/usr/bin/ruby -r ./siteconf20150321-20492-1003s66.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling context.c
+compiling locker.c
+compiling breakpoint.c
+compiling threads.c
+compiling byebug.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20150321-20492-gbproc/byebug
