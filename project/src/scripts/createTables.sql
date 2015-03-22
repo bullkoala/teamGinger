@@ -1,6 +1,6 @@
 /* Ensure no duplicate tables */
 DROP TABLE IF EXISTS events;
-DROP TABLE IF EXISTS personalitys;
+DROP TABLE IF EXISTS personalities;
 DROP TABLE IF EXISTS holdings;
 DROP TABLE IF EXISTS followers;
 DROP TABLE IF EXISTS rings;
@@ -34,7 +34,7 @@ CREATE TABLE events(
 	)ENGINE = InnoDB;
 
 /* Create Personality table */
-CREATE TABLE personalitys(
+CREATE TABLE personalities(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	strength TINYINT check (strength >= 0),

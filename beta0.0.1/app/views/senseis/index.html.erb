@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Senseis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typeid</th>
+      <th>Provincestrength</th>
+      <th>Goldproduction</th>
+      <th>Familyhonor</th>
+      <th>Keywords</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @senseis.each do |sensei| %>
+      <tr>
+        <td><%= sensei.typeID %></td>
+        <td><%= sensei.provinceStrength %></td>
+        <td><%= sensei.goldProduction %></td>
+        <td><%= sensei.familyHonor %></td>
+        <td><%= sensei.keywords %></td>
+        <td><%= sensei.description %></td>
+        <td><%= link_to 'Show', sensei %></td>
+        <td><%= link_to 'Edit', edit_sensei_path(sensei) %></td>
+        <td><%= link_to 'Destroy', sensei, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sensei', new_sensei_path %>

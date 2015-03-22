@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typeID: 1
+  goldCost: 1
+  goldProduction: 1
+  honorProduction: 1
+  keywords: MyString
+  description: MyString
+
+two:
+  typeID: 1
+  goldCost: 1
+  goldProduction: 1
+  honorProduction: 1
+  keywords: MyString
+  description: MyString

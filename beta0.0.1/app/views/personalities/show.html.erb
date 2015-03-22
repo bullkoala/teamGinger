@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @personality.typeID %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @personality.strength %>
+</p>
+
+<p>
+  <strong>Chi:</strong>
+  <%= @personality.chi %>
+</p>
+
+<p>
+  <strong>Goldcost:</strong>
+  <%= @personality.goldCost %>
+</p>
+
+<p>
+  <strong>Familyhonorrequirement:</strong>
+  <%= @personality.familyHonorRequirement %>
+</p>
+
+<p>
+  <strong>Personalhonor:</strong>
+  <%= @personality.personalHonor %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @personality.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @personality.description %>
+</p>
+
+<p>
+  <strong>Clan:</strong>
+  <%= @personality.clan %>
+</p>
+
+<%= link_to 'Edit', edit_personality_path(@personality) %> |
+<%= link_to 'Back', personalities_path %>

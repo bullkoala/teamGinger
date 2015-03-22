@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @attachment.typeID %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @attachment.strength %>
+</p>
+
+<p>
+  <strong>Chi:</strong>
+  <%= @attachment.chi %>
+</p>
+
+<p>
+  <strong>Goldcost:</strong>
+  <%= @attachment.goldCost %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @attachment.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @attachment.description %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @attachment.focus %>
+</p>
+
+<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+<%= link_to 'Back', attachments_path %>

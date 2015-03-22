@@ -1,17 +1,17 @@
 /* Clear tables for insertion */
 DELETE FROM types;
-DELETE FROM event;
-DELETE FROM personality;
-DELETE FROM holding;
-DELETE FROM follower;
+DELETE FROM events;
+DELETE FROM personalities;
+DELETE FROM holdings;
+DELETE FROM followers;
 DELETE FROM attachments;
 DELETE FROM monk_shugenja_attachments;
-DELETE FROM stronghold;
+DELETE FROM strongholds;
 DELETE FROM winds;
-DELETE FROM sensei;
-DELETE FROM ring;
-DELETE FROM act;
-DELETE FROM region;
+DELETE FROM senseis;
+DELETE FROM rings;
+DELETE FROM acts;
+DELETE FROM regions;
 
 
 /* Insert into Types table */
@@ -41,26 +41,26 @@ INSERT INTO events VALUES ('Norikazu\'s Ravings', '1', 'Until the end of the gam
 INSERT INTO events VALUES ('Wisdom Gained', '1', 'Open: Starting with you, each player may search his discard pile and Fate deck for a Ring, show it, and put it in his hand.');
 
 /* Insert into Personality table */
-INSERT INTO personalitys VALUES ('Yotsu Seiki', '1', '1', '2', '4', null, '1', 'Unaligned Shugenja, Battle', 'Battle: Bow for Ranged Attack equal to her Chi.', 'Unaligned');
-INSERT INTO personalitys VALUES ('Bayushi Dairu', '1', '3', '2', '7', null, '2', 'Scorpion Clan Samurai, Unique, Battle', 'Battle: Bow Dairu to give a -1C venom token to any opposing Personality.  While that Personality has any venom tokens, any time he performs an action, he gains an additional -1C venom token.  Whenever the target has an opportunity to straighten, he may destroy one venom token if he is already unbowed.  Lose 2 Honor.', 'Scorpion');
-INSERT INTO personalitys VALUES ('Hida Matyu', '1', '1', '2', '4', '0', '2', 'Crab Clan Cartographer, Limited', 'Limited: Bow Matyu and discard a terrain card from your hand.  Go through your Fate deck and select any one terrain card.  Reveal the terrain card to your opponents and put it in your hand.  Shuffle your Fate deck.', 'Crab');
-INSERT INTO personalitys VALUES ('Shazaar', '1', '2', '2', '6', '0', '2', 'Naga Scout, Open, Battle', 'Open: Bow any of your Pearl Beds or Pearl Divers to place a pearl token on Shazaar.\nBattle: Bow and destroy any numbers of pearl tokens on Shazaar to produce a Ranged Attack targeting a Shadowlands card.  This Ranged Attack has a strength equal to twice the number of pearl tokens destroyed.', 'Naga');
-INSERT INTO personalitys VALUES ('Shinja Goshi', '1', '3', '3', '7', '0', '3', 'Unicorn Clan Samurai, Cavalry', 'This Personality may have a Follower attached as he is being put into play.  All costs must be paid normally.', 'Unicorn');
-INSERT INTO personalitys VALUES ('Kitsu Dejiko', '1', '4', '4', '9', '8', '3', 'Lion Clan Samurai, Reaction', 'Reaction: Once per turn, when another player takes an action during a battle containing Dejiko in which the player has no Personalities, bow Dejiko to cancel the action.', 'Lion');
-INSERT INTO personalitys VALUES ('Yoritomo Kitao', '1', '2', '2', '6', '2', '1', 'Mantis Clan of the Bitter Flower, Samurai', null, 'Mantis');
-INSERT INTO personalitys VALUES ('Asako Misao', '1', '1', '3', '5', '1', '2', 'Phoenix Clan Shugenja, Limited', 'Limited: Bow Misao and one of your Personalities with the Ninja, Shadowlands, or Bloodspeaker trair to permanently remove the Ninja, Shadowlands, or Bloodspeaker trait from the Personality', 'Phoenix');
-INSERT INTO personalitys VALUES ('Shiba Tsukune', '1', '3', '2', '5', '5', '2', 'Phoenix Clan Samurai, Reaction', 'Reaction: When Tsukune enters a duel with a Shugenja, she gains +3C.', 'Phoenix');
-INSERT INTO personalitys VALUES ('Fushiki no oni', '1', '5', '4', '8', null, '0', 'Fire, Nonhuman, Oni, Shadowlands, Fire Battle', 'After Fushiki enters play, lose 4 Honor.\nFire Battle: Destroy a target Fortification at this battlefield with Gold Cost lower than Fushiki\'s Force.  Give Fushiki a +1F token', 'Shadowland');
-INSERT INTO personalitys VALUES ('Mirumoto Kaiji', '1', '4', '5', '9', '5', '3', 'Dragon Clan Hero, Samurai, Singular', 'If your Stronghold is Shiro Mirumoto, your Personalities in this battle may perform Limited Action cards that issue challenges as if they were Battle actions.  The challenged Personality must be opposing the challenger.\nKaiji may perform Shiro Mirumoto\'s printed ability wihtout bowing.', 'Dragon');
-INSERT INTO personalitys VALUES ('Hitomi Mae', '1', '3', '2', '7', '0', '2', 'Dragon Clan Monk, Acolyte of Fire, Soul of Takao, Elemental, Reaction', 'Elemental Reaction: When ae enters a duel against an opponent with higher Chi, Mae has the first opportunity to focus or stike.\nElemental Reaction: When Mae enters a duel while you have a Ring of Fire in play, destroy one Weapon attached to her opponent.', 'Dragon');
-INSERT INTO personalitys VALUES ('Daidoji Akagi', '1', '1', '3', '5', '0', '2', 'Crane Clan, Samurai, Scout, Battle, Reaction', 'Battle: Bow Akagi: Ranged 2 Attack.\nReaction: After you target a Ranged Attack from an action that Akagi performed, even it he is bowed, discard a card: increase the Ranged Attack\'s strength by the card\'s Focus Value.', 'Crane');
-INSERT INTO personalitys VALUES ('Daidoji Ryunosuke', '1', '2', '3', '6', null, '2', 'Crane Clan Samurai, Harrier, Battle', 'Ranged Attacks may not target Ryunosuke\'s Followers.\nBattle: Once per battle, if you control a Terrain: Target an opposing Personality.  Give him -3F.\nBattle: Once per battle, if another player controls a Terrain: Target up to 2 Personalities that player controls at Ryunosuke\'s battlefield.  Bow them.', 'Crane');
-INSERT INTO personalitys VALUES ('Ruantek', '1', '1', '3', '6', null, '1', 'Ratling Scout, Grasping Paw Tribe, Creature, Cavalry', 'Ratling Followers gain the Cavalry trait while attached to Ruantek.', 'Ratling');
-INSERT INTO personalitys VALUES ('Bayushi Muhito', '1', '3', '4', '7', null, '1', 'Scorpion Clan, Samurai, Ninja, Reaction', 'Reaction: After an action resolves that moved Muhito to or from a battlefield: Take an additional Battle action.', 'Scorpion');
-INSERT INTO personalitys VALUES ('Moto Gurban', '1', '3', '3', '8', null, '2', 'Unicorn Clan Bushi, Cavalry, Reaction', 'Gurban gains +1F if she has an item.\nReaction: Once per turn, when a Limited action targets one of your Personalities, cancel it.  Permanently reduce Gurban\'s Personal Honor by the number of other Personalities you control.  If her new Personal Honor is 0, Gurban commits seppuku.', 'Unicorn');
-INSERT INTO personalitys VALUES ('Daigotsu Masami', '1', '3', '2', '7', null, '0', 'Spider Clan, Samurai, Shadowlands, Limited', 'Lose 4 Honor.  After the first time each turn Masami leaves play, he permanently gains +1F.\nLimited: If Masami is dead: Discard a card in one of your Provinces, refilling it face up with Masami.', 'Spider');
-INSERT INTO personalitys VALUES ('Asako Meisuru', '1', '3', '4', '7', '0', '3', 'Phoenix Clan, Water, Shugenja, Battle', 'Battle: Target one or more cards in Meisuru\'s army up to her Chi: Straighten them.', 'Phoenix');
-INSERT INTO personalitys VALUES ('Matsu Bunka', '1', '2', '2', '5', '3', '3', 'Lion Clan, Samurai, Reaction', 'Reaction: Before resolution of a battle Bunka is in, if you are the Attacker and Buna is opposed: Gain 3 Honor.', 'Lion');
+INSERT INTO personalities VALUES ('Yotsu Seiki', '1', '1', '2', '4', null, '1', 'Unaligned Shugenja, Battle', 'Battle: Bow for Ranged Attack equal to her Chi.', 'Unaligned');
+INSERT INTO personalities VALUES ('Bayushi Dairu', '1', '3', '2', '7', null, '2', 'Scorpion Clan Samurai, Unique, Battle', 'Battle: Bow Dairu to give a -1C venom token to any opposing Personality.  While that Personality has any venom tokens, any time he performs an action, he gains an additional -1C venom token.  Whenever the target has an opportunity to straighten, he may destroy one venom token if he is already unbowed.  Lose 2 Honor.', 'Scorpion');
+INSERT INTO personalities VALUES ('Hida Matyu', '1', '1', '2', '4', '0', '2', 'Crab Clan Cartographer, Limited', 'Limited: Bow Matyu and discard a terrain card from your hand.  Go through your Fate deck and select any one terrain card.  Reveal the terrain card to your opponents and put it in your hand.  Shuffle your Fate deck.', 'Crab');
+INSERT INTO personalities VALUES ('Shazaar', '1', '2', '2', '6', '0', '2', 'Naga Scout, Open, Battle', 'Open: Bow any of your Pearl Beds or Pearl Divers to place a pearl token on Shazaar.\nBattle: Bow and destroy any numbers of pearl tokens on Shazaar to produce a Ranged Attack targeting a Shadowlands card.  This Ranged Attack has a strength equal to twice the number of pearl tokens destroyed.', 'Naga');
+INSERT INTO personalities VALUES ('Shinja Goshi', '1', '3', '3', '7', '0', '3', 'Unicorn Clan Samurai, Cavalry', 'This Personality may have a Follower attached as he is being put into play.  All costs must be paid normally.', 'Unicorn');
+INSERT INTO personalities VALUES ('Kitsu Dejiko', '1', '4', '4', '9', '8', '3', 'Lion Clan Samurai, Reaction', 'Reaction: Once per turn, when another player takes an action during a battle containing Dejiko in which the player has no Personalities, bow Dejiko to cancel the action.', 'Lion');
+INSERT INTO personalities VALUES ('Yoritomo Kitao', '1', '2', '2', '6', '2', '1', 'Mantis Clan of the Bitter Flower, Samurai', null, 'Mantis');
+INSERT INTO personalities VALUES ('Asako Misao', '1', '1', '3', '5', '1', '2', 'Phoenix Clan Shugenja, Limited', 'Limited: Bow Misao and one of your Personalities with the Ninja, Shadowlands, or Bloodspeaker trair to permanently remove the Ninja, Shadowlands, or Bloodspeaker trait from the Personality', 'Phoenix');
+INSERT INTO personalities VALUES ('Shiba Tsukune', '1', '3', '2', '5', '5', '2', 'Phoenix Clan Samurai, Reaction', 'Reaction: When Tsukune enters a duel with a Shugenja, she gains +3C.', 'Phoenix');
+INSERT INTO personalities VALUES ('Fushiki no oni', '1', '5', '4', '8', null, '0', 'Fire, Nonhuman, Oni, Shadowlands, Fire Battle', 'After Fushiki enters play, lose 4 Honor.\nFire Battle: Destroy a target Fortification at this battlefield with Gold Cost lower than Fushiki\'s Force.  Give Fushiki a +1F token', 'Shadowland');
+INSERT INTO personalities VALUES ('Mirumoto Kaiji', '1', '4', '5', '9', '5', '3', 'Dragon Clan Hero, Samurai, Singular', 'If your Stronghold is Shiro Mirumoto, your Personalities in this battle may perform Limited Action cards that issue challenges as if they were Battle actions.  The challenged Personality must be opposing the challenger.\nKaiji may perform Shiro Mirumoto\'s printed ability wihtout bowing.', 'Dragon');
+INSERT INTO personalities VALUES ('Hitomi Mae', '1', '3', '2', '7', '0', '2', 'Dragon Clan Monk, Acolyte of Fire, Soul of Takao, Elemental, Reaction', 'Elemental Reaction: When ae enters a duel against an opponent with higher Chi, Mae has the first opportunity to focus or stike.\nElemental Reaction: When Mae enters a duel while you have a Ring of Fire in play, destroy one Weapon attached to her opponent.', 'Dragon');
+INSERT INTO personalities VALUES ('Daidoji Akagi', '1', '1', '3', '5', '0', '2', 'Crane Clan, Samurai, Scout, Battle, Reaction', 'Battle: Bow Akagi: Ranged 2 Attack.\nReaction: After you target a Ranged Attack from an action that Akagi performed, even it he is bowed, discard a card: increase the Ranged Attack\'s strength by the card\'s Focus Value.', 'Crane');
+INSERT INTO personalities VALUES ('Daidoji Ryunosuke', '1', '2', '3', '6', null, '2', 'Crane Clan Samurai, Harrier, Battle', 'Ranged Attacks may not target Ryunosuke\'s Followers.\nBattle: Once per battle, if you control a Terrain: Target an opposing Personality.  Give him -3F.\nBattle: Once per battle, if another player controls a Terrain: Target up to 2 Personalities that player controls at Ryunosuke\'s battlefield.  Bow them.', 'Crane');
+INSERT INTO personalities VALUES ('Ruantek', '1', '1', '3', '6', null, '1', 'Ratling Scout, Grasping Paw Tribe, Creature, Cavalry', 'Ratling Followers gain the Cavalry trait while attached to Ruantek.', 'Ratling');
+INSERT INTO personalities VALUES ('Bayushi Muhito', '1', '3', '4', '7', null, '1', 'Scorpion Clan, Samurai, Ninja, Reaction', 'Reaction: After an action resolves that moved Muhito to or from a battlefield: Take an additional Battle action.', 'Scorpion');
+INSERT INTO personalities VALUES ('Moto Gurban', '1', '3', '3', '8', null, '2', 'Unicorn Clan Bushi, Cavalry, Reaction', 'Gurban gains +1F if she has an item.\nReaction: Once per turn, when a Limited action targets one of your Personalities, cancel it.  Permanently reduce Gurban\'s Personal Honor by the number of other Personalities you control.  If her new Personal Honor is 0, Gurban commits seppuku.', 'Unicorn');
+INSERT INTO personalities VALUES ('Daigotsu Masami', '1', '3', '2', '7', null, '0', 'Spider Clan, Samurai, Shadowlands, Limited', 'Lose 4 Honor.  After the first time each turn Masami leaves play, he permanently gains +1F.\nLimited: If Masami is dead: Discard a card in one of your Provinces, refilling it face up with Masami.', 'Spider');
+INSERT INTO personalities VALUES ('Asako Meisuru', '1', '3', '4', '7', '0', '3', 'Phoenix Clan, Water, Shugenja, Battle', 'Battle: Target one or more cards in Meisuru\'s army up to her Chi: Straighten them.', 'Phoenix');
+INSERT INTO personalities VALUES ('Matsu Bunka', '1', '2', '2', '5', '3', '3', 'Lion Clan, Samurai, Reaction', 'Reaction: Before resolution of a battle Bunka is in, if you are the Attacker and Buna is opposed: Gain 3 Honor.', 'Lion');
 
 /* Insert into Holding table */
 INSERT INTO holdings VALUES ('Ashalan Sandsmith', '1', '4', '2', null, 'Limited, Battle', 'Bow the Ashalan Sandsmith to produce 2 Gold.\nLimited: Bow the Ashalan Sandsmith to place a +1C Crystal Weapon Item on a Personality.\nBattle: If one or more Ninja Personalities or Shadowlands Personalities are in the opposing army, bow the Ashalan Sandsmith to give a +2F/+2C bonus to each Crystal Weapon token in this battle until the turn ends.');
