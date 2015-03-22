@@ -73,6 +73,14 @@ mysql> source ~/teamginger/scripts/insert.sql;
 ```
 $ cd ~/teamginger/beta0.0.1/
 ```
+  
+  *Rake the database.
+
+```
+$ rake db:migrate
+```
+
+
 
   * Launch the WEBrick Server.
 	
