@@ -4,9 +4,10 @@
 *.swp
 tmp/
 
-# Ignore bundler config.
+# Environmental normalization
 **/.bundle
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 **/.sqlite3
@@ -17,6 +18,23 @@ tmp/
 # Ignore all logfiles and tempfiles.
 **/log
 /log/*
+/log
 !/log/.keep
 **/tmp
 /tmp
+
+# Github recommendations for a Rails gitignore
+*.rbc
+capybara-*.html
+.rspec
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore pow environment settings
+ .powenv
+
+#------------------------------------ EOF ------------------------------------#
