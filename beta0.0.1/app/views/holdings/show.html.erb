@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @holding.typeID %>
+</p>
+
+<p>
+  <strong>Goldcost:</strong>
+  <%= @holding.goldCost %>
+</p>
+
+<p>
+  <strong>Goldproduction:</strong>
+  <%= @holding.goldProduction %>
+</p>
+
+<p>
+  <strong>Honorproduction:</strong>
+  <%= @holding.honorProduction %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @holding.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @holding.description %>
+</p>
+
+<%= link_to 'Edit', edit_holding_path(@holding) %> |
+<%= link_to 'Back', holdings_path %>

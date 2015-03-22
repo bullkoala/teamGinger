@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @follower.typeID %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @follower.strength %>
+</p>
+
+<p>
+  <strong>Chi:</strong>
+  <%= @follower.chi %>
+</p>
+
+<p>
+  <strong>Personalhonor:</strong>
+  <%= @follower.personalHonor %>
+</p>
+
+<p>
+  <strong>Goldcost:</strong>
+  <%= @follower.goldCost %>
+</p>
+
+<p>
+  <strong>Honorrequirement:</strong>
+  <%= @follower.honorRequirement %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @follower.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @follower.description %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @follower.focus %>
+</p>
+
+<%= link_to 'Edit', edit_follower_path(@follower) %> |
+<%= link_to 'Back', followers_path %>
