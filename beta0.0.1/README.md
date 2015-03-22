@@ -14,7 +14,7 @@
 $ rails --version
 ```
 
-    * This should say 4.2.1 as of March 22, 2015
+  * This should say 4.2.1 as of March 22, 2015
 
   * Now, refer to the initial inserts & create tables scripts located in the /scripts/ folder and launch your mysql database from console (if it doesn't start on boot).
 
@@ -40,7 +40,7 @@ $ mysql -u username -p if_using_password *if using password
 $ mysql -u root *if setup like above
 ```
 
-    * (your credentials will be different most likely)
+  * (your credentials will be different most likely)
 
   * Create a db that the project will reference. For everyones benefit lets call it reference_project (as in above).
 	
@@ -66,7 +66,7 @@ mysql> source ~/teamginger/scripts/createTables.sql;
 mysql> source ~/teamginger/scripts/insert.sql;
 ```
 
-    * Now that the database is properly populated we can launch the webserver and the site should good to go.
+  * Now that the database is properly populated we can launch the webserver and the site should good to go.
 
   * Navigate to the beta 0.0.1 project directory.
 
