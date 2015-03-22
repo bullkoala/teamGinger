@@ -4,91 +4,91 @@
 ##[THIS WILL NOT BE NEEDED IN LATER IMPLEMENTATIONS OF THE APP]
 ##[ITS BETA FOR GODSAKE GIVE ME A BREAK - Richard Stallman]
 
-*First of all, this guide is geared towards a linux environment.  Chuck, I'm sorry.
+  * First of all, this guide is geared towards a linux environment.  Chuck, I'm sorry.
 
-*Second, make sure you have the latest version of Ruby on Rails installed through the gem installer or your favorite package manager. gems/pacgem/etc will probably have you install like 50 dependencies -- just follow along and let it do its thing.
+  * Second, make sure you have the latest version of Ruby on Rails installed through the gem installer or your favorite package manager. gems/pacgem/etc will probably have you install like 50 dependencies -- just follow along and let it do its thing.
 
-*Once that is operating verify that you are up to speed:
+  * Once that is operating verify that you are up to speed:
 
-	```
-	$ rails --version
-	```
+```
+$ rails --version
+```
 
-  *This should say 4.2.1 as of March 22, 2015
+    * This should say 4.2.1 as of March 22, 2015
 
-*Now, refer to the initial inserts & create tables scripts located in the /scripts/ folder and launch your mysql database from console (if it doesn't start on boot).
+  * Now, refer to the initial inserts & create tables scripts located in the /scripts/ folder and launch your mysql database from console (if it doesn't start on boot).
 
-	```
-	$ sudo systemctrl start mysqld.service
-	```
+```
+$ sudo systemctrl start mysqld.service
+```
 
-*If you have user accounts other than root set up for your mysql db (which is advised but I haven't in this implementation) you will need to edit the database.yml file located in /config/ to conform to your login credentials. You may also need to edit your db socket. 
+  * If you have user accounts other than root set up for your mysql db (which is advised but I haven't in this implementation) you will need to edit the database.yml file located in /config/ to conform to your login credentials. You may also need to edit your db socket. 
 
-	```
-	development:
-  	adapter: mysql
-  	database: reference_project
-  	username: root
-  	password:
-  	socket: /run/mysqld/mysqld.sock
-	```
+```
+development:
+adapter: mysql
+database: reference_project
+username: root
+password:
+socket: /run/mysqld/mysqld.sock
+```
 
-*Once the database.yml file is setup for your machine, launch a mysql shell
+  * Once the database.yml file is setup for your machine, launch a mysql shell
 
-	```
-	$ mysql -u username -p if_using_password *if using password
-	$ mysql -u root *if setup like above
-	```
+```
+$ mysql -u username -p if_using_password *if using password
+$ mysql -u root *if setup like above
+```
 
-  *(your credentials will be different most likely)
+    * (your credentials will be different most likely)
 
-*Create a db that the project will reference. For everyones benefit lets call it reference_project (as in above).
+  * Create a db that the project will reference. For everyones benefit lets call it reference_project (as in above).
 	
-	```
-	mysql> create database reference_project;
-	```
+```
+mysql> create database reference_project;
+```
 
-*Switch to that database.
+  * Switch to that database.
 
-	```
-	mysql> use reference_project;
-	```
+```
+mysql> use reference_project;
+```
 
-*Populate the database with tables from project folder (this is very important, make sure the case matches exactly).
+  * Populate the database with tables from project folder (this is very important, make sure the case matches exactly).
 
-	```
-	mysql> source ~/teamginger/scripts/createTables.sql;
-	```
+```
+mysql> source ~/teamginger/scripts/createTables.sql;
+```
 
-*Populate the database with inserts from project folder (this is very important, make sure the case matches exactly).
+  * Populate the database with inserts from project folder (this is very important, make sure the case matches exactly).
 
-	```
-	mysql> source ~/teamginger/scripts/insert.sql;
-	```
+```
+mysql> source ~/teamginger/scripts/insert.sql;
+```
 
-*Now that the database is properly populated we can launch the webserver and the site should good to go.
+    * Now that the database is properly populated we can launch the webserver and the site should good to go.
 
-*Navigate to the beta 0.0.1 project directory.
+  * Navigate to the beta 0.0.1 project directory.
 
-	```
-	$ cd ~/teamginger/beta0.0.1/
-	```
+```
+$ cd ~/teamginger/beta0.0.1/
+```
 
-*Launch the WEBrick Server.
+  * Launch the WEBrick Server.
 	
-	```
-	$ rails server
-	```
+```
+$ rails server
+```
 
 ###The command below may be useful for displaying the demo to Dr. Narayan or for the final presentation. Something we can discuss later if we do not plan on actually hosting this in public webspace.###
 
-*You can also specify the socket which will serve this webpage, if you prefer ie: which ip and port to serve the application on:
+  *  You can also specify the socket which will serve this webpage, if you prefer ie: which ip and port to serve the application on:
 
-	```
-	$ rails server -b your_network_ip_here -p 3000
-	```
+```
+$ rails server -b your_network_ip_here -p 3000
+```
 
-*Okay! Now we can pop open a browers and direct ourselves to localhost:3000 (if you used the first command) or your_network_ip_here:3000 (if you used the second command).
+  * Okay! Now we can pop open a browers and direct ourselves to localhost:3000 (if you used the first command) or your_network_ip_here:3000 (if you used the second command).
 
 I hope it works. 
 
