@@ -1,6 +1,8 @@
-== README FOR BETA 0.0.1 	[THE FIRST HALF OF THIS GUIDE IS JUST GETTING THE DB TO CONFORM TO RAILS STANDARDS]==
-				[THIS WILL NOT BE NEEDED TO BE DONE IN LATER IMPLEMENTATIONS OF THE APP]
-				[ITS BETA FOR GODSAKE GIVE ME A BREAK - Richard Stallman]
+== README FOR BETA 0.0.1 	[THE FIRST HALF OF THIS GUIDE IS JUST GETTING THE DB TO CONFORM TO RAILS STANDARDS]
+*OPEN THIS FILE IN A TEXT	[THIS WILL NOT BE NEEDED TO BE DONE IN LATER IMPLEMENTATIONS OF THE APP]
+*EDITOR OR ELSE THE FORMATTING	[ITS BETA FOR GODSAKE GIVE ME A BREAK - Richard Stallman]
+*IS FUCKED
+
 
 **Firstly, this guide is geared towards a linux environment.  Chuck, I'm sorry.**
 
@@ -13,7 +15,7 @@ Once that is operating verify that you are up to speed:
 
 	*This should say 4.2.1 as of March 22, 2015
 
-Now, refer to the initial inserts & create tables scripts located in the project/src/scripts/ folder and launch your 
+Now, refer to the initial inserts & create tables scripts located in the /scripts/ folder and launch your 
 mysql database from console (if it doesn't start on boot).
 
 	$ sudo systemctrl start mysqld.service
