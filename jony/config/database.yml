@@ -19,7 +19,7 @@ default: &default
 development:
   adapter:     mysql
   database:    reference_project
-  username:    rdev@localhost
+  username:    rdev
   password:
   socket:      /run/mysqld/mysqld.sock
 
