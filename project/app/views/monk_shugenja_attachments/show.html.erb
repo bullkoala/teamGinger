@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @monk_shugenja_attachment.typeID %>
+</p>
+
+<p>
+  <strong>Goldcost:</strong>
+  <%= @monk_shugenja_attachment.goldCost %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @monk_shugenja_attachment.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @monk_shugenja_attachment.description %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @monk_shugenja_attachment.focus %>
+</p>
+
+<%= link_to 'Edit', edit_monk_shugenja_attachment_path(@monk_shugenja_attachment) %> |
+<%= link_to 'Back', monk_shugenja_attachments_path %>

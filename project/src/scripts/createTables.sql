@@ -1,20 +1,20 @@
 /* Ensure no duplicate tables */
-DROP TABLE IF EXISTS Event;
-DROP TABLE IF EXISTS Personality;
-DROP TABLE IF EXISTS Holding;
-DROP TABLE IF EXISTS Follower;
-DROP TABLE IF EXISTS Ring;
-DROP TABLE IF EXISTS Winds;
-DROP TABLE IF EXISTS Stronghold;
-DROP TABLE IF EXISTS Attachments;
-DROP TABLE IF EXISTS MonkShugenjaAttachments;
-DROP TABLE IF EXISTS Action;
-DROP TABLE IF EXISTS Region;
-DROP TABLE IF EXISTS Sensei;
-DROP TABLE IF EXISTS Types;
+DROP TABLE IF EXISTS events;
+DROP TABLE IF EXISTS personalities;
+DROP TABLE IF EXISTS holdings;
+DROP TABLE IF EXISTS followers;
+DROP TABLE IF EXISTS rings;
+DROP TABLE IF EXISTS windss;
+DROP TABLE IF EXISTS strongholds;
+DROP TABLE IF EXISTS attachmentss;
+DROP TABLE IF EXISTS monk_shugenja_attachments;
+DROP TABLE IF EXISTS acts;
+DROP TABLE IF EXISTS regions;
+DROP TABLE IF EXISTS senseis;
+DROP TABLE IF EXISTS types;
 
 /* Create Type table */
-CREATE TABLE Types(
+CREATE TABLE types(
 	typeID TINYINT not null,
 	typeName VARCHAR (7) not null,
 	PRIMARY KEY (typeID)
@@ -23,18 +23,18 @@ CREATE TABLE Types(
 	)ENGINE = InnoDB;
 
 /* Create Event table */
-CREATE TABLE Event(
+CREATE TABLE events(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	description VARCHAR (500),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Personality table */
-CREATE TABLE Personality(
+CREATE TABLE personalities(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	strength TINYINT check (strength >= 0),
@@ -46,13 +46,13 @@ CREATE TABLE Personality(
 	description VARCHAR (500),
 	clan VARCHAR (15) not null,
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;	 
 
 /* Create Holding table */
-CREATE TABLE Holding(
+CREATE TABLE holdings(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	goldCost TINYINT check (goldCost >= 0),
@@ -61,13 +61,13 @@ CREATE TABLE Holding(
 	keywords VARCHAR (75),
 	description VARCHAR (500),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Follower table */
-CREATE TABLE Follower(
+CREATE TABLE followers(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	strength TINYINT check (strength >= 0),
@@ -79,38 +79,38 @@ CREATE TABLE Follower(
 	description VARCHAR (500),
 	focus TINYINT check (focus >= 0),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Ring table */
-CREATE TABLE Ring(
+CREATE TABLE rings(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	keywords VARCHAR (75),
 	description VARCHAR (500),
 	focus TINYINT check (focus >= 0),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Winds table */
-CREATE TABLE Winds(
+CREATE TABLE winds(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	keywords VARCHAR (75),
 	description VARCHAR (500),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Stronghold table */
-CREATE TABLE Stronghold(
+CREATE TABLE strongholds(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	provinceStrength TINYINT check (provinceStrength >= 0),
@@ -120,13 +120,13 @@ CREATE TABLE Stronghold(
 	description VARCHAR (500),
 	clan VARCHAR (15) not null,
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Attachments table */
-CREATE TABLE Attachments(
+CREATE TABLE attachments(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	strength TINYINT not null,
@@ -136,13 +136,13 @@ CREATE TABLE Attachments(
 	description VARCHAR (400),
 	focus TINYINT check (focus >= 0),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create MonkShugenjaAttachments tables */
-CREATE TABLE MonkShugenjaAttachments(
+CREATE TABLE monk_shugenja_attachments(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	goldCost TINYINT check (goldCost >= 0),
@@ -150,13 +150,13 @@ CREATE TABLE MonkShugenjaAttachments(
 	description VARCHAR (500),
 	focus TINYINT check  (focus >= 0),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Action table */
-CREATE TABLE Action(
+CREATE TABLE acts(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	goldCost TINYINT check (goldCost >= 0),
@@ -164,25 +164,25 @@ CREATE TABLE Action(
 	description VARCHAR (500),
 	focus TINYINT check (focus >= 0),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Region table */
-CREATE TABLE  Region(
+CREATE TABLE  regions(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	keywords VARCHAR (75),
 	description VARCHAR (500),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
 
 /* Create Sensei table */
-CREATE TABLE Sensei(
+CREATE TABLE senseis(
 	title VARCHAR (40) not null,
 	typeID TINYINT not null,
 	provinceStrength TINYINT,
@@ -191,7 +191,7 @@ CREATE TABLE Sensei(
 	keywords VARCHAR (75),
 	description VARCHAR (500),
 	PRIMARY KEY (title),
-	FOREIGN KEY (typeID) REFERENCES Types (typeID)
+	FOREIGN KEY (typeID) REFERENCES types (typeID)
 	on UPDATE cascade
 	on DELETE cascade
 	)ENGINE = InnoDB;
