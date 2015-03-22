@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Attachments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typeid</th>
+      <th>Strength</th>
+      <th>Chi</th>
+      <th>Goldcost</th>
+      <th>Keywords</th>
+      <th>Description</th>
+      <th>Focus</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attachments.each do |attachment| %>
+      <tr>
+        <td><%= attachment.typeID %></td>
+        <td><%= attachment.strength %></td>
+        <td><%= attachment.chi %></td>
+        <td><%= attachment.goldCost %></td>
+        <td><%= attachment.keywords %></td>
+        <td><%= attachment.description %></td>
+        <td><%= attachment.focus %></td>
+        <td><%= link_to 'Show', attachment %></td>
+        <td><%= link_to 'Edit', edit_attachment_path(attachment) %></td>
+        <td><%= link_to 'Destroy', attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attachment', new_attachment_path %>
