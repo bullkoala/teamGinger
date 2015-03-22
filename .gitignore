@@ -1,15 +1,14 @@
 # Because it's really supposed to go in a global ignore, let's put it here
-*.swp
-tmp/
+**/.swp
 
 # Ignore bundler config.
-.bundle
+**/.bundle
 
 # Ignore the default SQLite database.
-db/*.sqlite3
-db/*.sqlite3-journal
+**/.sqlite3
+**/.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-log/
+**/log
 !/log/.keep
-/tmp
+**/tmp
