@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Monk Shugenja Attachments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typeid</th>
+      <th>Goldcost</th>
+      <th>Keywords</th>
+      <th>Description</th>
+      <th>Focus</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monk_shugenja_attachments.each do |monk_shugenja_attachment| %>
+      <tr>
+        <td><%= monk_shugenja_attachment.typeID %></td>
+        <td><%= monk_shugenja_attachment.goldCost %></td>
+        <td><%= monk_shugenja_attachment.keywords %></td>
+        <td><%= monk_shugenja_attachment.description %></td>
+        <td><%= monk_shugenja_attachment.focus %></td>
+        <td><%= link_to 'Show', monk_shugenja_attachment %></td>
+        <td><%= link_to 'Edit', edit_monk_shugenja_attachment_path(monk_shugenja_attachment) %></td>
+        <td><%= link_to 'Destroy', monk_shugenja_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Monk shugenja attachment', new_monk_shugenja_attachment_path %>
