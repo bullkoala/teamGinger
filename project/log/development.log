@@ -4555,3 +4555,1431 @@ Started GET "/assets/winds-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 a
 
 
 Started GET "/assets/application-86d8598eee9533e57237bea2e8018703.js?body=1" for ::1 at 2015-03-21 17:15:23 -0400
+
+
+Started GET "/" for ::1 at 2015-03-21 19:30:09 -0400
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (24.5ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 19:30:49 -0400
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 19:30:50 -0400
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 19:30:53 -0400
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.5ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 19:31:32 -0400
+
+Mysql::Error (Access denied for user 'rdev'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.7ms)
+  [1m[36m (20.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (31.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20150321180403)
+  [1m[35m (21.2ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150321180403"]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rdev'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for ::1 at 2015-03-21 19:35:59 -0400
+
+Mysql::Error (Access denied for user 'rdev'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (21.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 19:36:01 -0400
+
+Mysql::Error (Access denied for user 'rdev'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.8ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-03-21 20:28:40 -0400
+
+Mysql::Error (Access denied for user 'rdev'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 20:28:45 -0400
+
+Mysql::Error (Access denied for user 'rdev'@'localhost' (using password: NO)):
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `real_connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:456:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:108:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-21 20:29:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 793ms (Views: 784.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/acts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/attachments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/followers-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/monk_shugenja_attachments-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/holdings-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/personalities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/regions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/rings-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/scaffolds-72bc1e197d5bdd1bff809954068d7196.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/senseis-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/strongholds-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/types-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/winds-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/application-5725ed9c62a9da7cfc65e67332ef282b.css?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/acts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/attachments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/followers-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/holdings-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/monk_shugenja_attachments-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/personalities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/regions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/rings-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/senseis-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/strongholds-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/types-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/winds-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/assets/application-86d8598eee9533e57237bea2e8018703.js?body=1" for ::1 at 2015-03-21 20:29:48 -0400
+
+
+Started GET "/acts/" for ::1 at 2015-03-21 20:30:03 -0400
+Processing by ActsController#index as HTML
+  [1m[35mAct Load (1.1ms)[0m  SELECT `acts`.* FROM `acts`
+Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`
+  Rendered acts/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @acts.each do |act| %>
+    19:       <tr>
+    20:         <td><%= act.typeID %></td>
+    21:         <td><%= act.goldCost %></td>
+  app/views/acts/index.html.erb:18:in `_app_views_acts_index_html_erb___2654292066019457581_47098460'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (34.7ms)
+
+
+Started GET "/acts/" for ::1 at 2015-03-21 20:30:03 -0400
+Processing by ActsController#index as HTML
+  [1m[36mAct Load (0.8ms)[0m  [1mSELECT `acts`.* FROM `acts`[0m
+Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`
+  Rendered acts/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @acts.each do |act| %>
+    19:       <tr>
+    20:         <td><%= act.typeID %></td>
+    21:         <td><%= act.goldCost %></td>
+  app/views/acts/index.html.erb:18:in `_app_views_acts_index_html_erb___2654292066019457581_31734760'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.1ms)
+
+
+Started GET "/winds/" for ::1 at 2015-03-21 20:30:09 -0400
+Processing by WindsController#index as HTML
+  [1m[35mWind Load (1.1ms)[0m  SELECT `winds`.* FROM `winds`
+Mysql::Error: Table 'rdev.winds' doesn't exist: SELECT `winds`.* FROM `winds`
+  Rendered winds/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.winds' doesn't exist: SELECT `winds`.* FROM `winds`):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @winds.each do |wind| %>
+    17:       <tr>
+    18:         <td><%= wind.typeID %></td>
+    19:         <td><%= wind.keywords %></td>
+  app/views/winds/index.html.erb:16:in `_app_views_winds_index_html_erb___1894115854453872188_45121880'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.5ms)
+
+
+Started GET "/winds/" for ::1 at 2015-03-21 20:30:09 -0400
+Processing by WindsController#index as HTML
+  [1m[36mWind Load (0.5ms)[0m  [1mSELECT `winds`.* FROM `winds`[0m
+Mysql::Error: Table 'rdev.winds' doesn't exist: SELECT `winds`.* FROM `winds`
+  Rendered winds/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.winds' doesn't exist: SELECT `winds`.* FROM `winds`):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @winds.each do |wind| %>
+    17:       <tr>
+    18:         <td><%= wind.typeID %></td>
+    19:         <td><%= wind.keywords %></td>
+  app/views/winds/index.html.erb:16:in `_app_views_winds_index_html_erb___1894115854453872188_47860700'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.0ms)
+
+
+Started GET "/attachments/" for ::1 at 2015-03-21 20:30:11 -0400
+Processing by AttachmentsController#index as HTML
+  [1m[35mAttachment Load (1.0ms)[0m  SELECT `attachments`.* FROM `attachments`
+Mysql::Error: Table 'rdev.attachments' doesn't exist: SELECT `attachments`.* FROM `attachments`
+  Rendered attachments/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.attachments' doesn't exist: SELECT `attachments`.* FROM `attachments`):
+    17:   </thead>
+    18: 
+    19:   <tbody>
+    20:     <% @attachments.each do |attachment| %>
+    21:       <tr>
+    22:         <td><%= attachment.typeID %></td>
+    23:         <td><%= attachment.strength %></td>
+  app/views/attachments/index.html.erb:20:in `_app_views_attachments_index_html_erb___3059468349087814271_32051540'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.3ms)
+
+
+Started GET "/attachments/" for ::1 at 2015-03-21 20:30:11 -0400
+Processing by AttachmentsController#index as HTML
+  [1m[36mAttachment Load (0.6ms)[0m  [1mSELECT `attachments`.* FROM `attachments`[0m
+Mysql::Error: Table 'rdev.attachments' doesn't exist: SELECT `attachments`.* FROM `attachments`
+  Rendered attachments/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.attachments' doesn't exist: SELECT `attachments`.* FROM `attachments`):
+    17:   </thead>
+    18: 
+    19:   <tbody>
+    20:     <% @attachments.each do |attachment| %>
+    21:       <tr>
+    22:         <td><%= attachment.typeID %></td>
+    23:         <td><%= attachment.strength %></td>
+  app/views/attachments/index.html.erb:20:in `_app_views_attachments_index_html_erb___3059468349087814271_70274059909700'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.0ms)
+
+
+Started GET "/events" for ::1 at 2015-03-21 20:30:13 -0400
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (1.1ms)[0m  SELECT `events`.* FROM `events`
+Mysql::Error: Table 'rdev.events' doesn't exist: SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.events' doesn't exist: SELECT `events`.* FROM `events`):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @events.each do |event| %>
+    16:       <tr>
+    17:         <td><%= event.typeID %></td>
+    18:         <td><%= event.description %></td>
+  app/views/events/index.html.erb:15:in `_app_views_events_index_html_erb__467549240644651181_34350100'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.5ms)
+
+
+Started GET "/events" for ::1 at 2015-03-21 20:30:13 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Mysql::Error: Table 'rdev.events' doesn't exist: SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.events' doesn't exist: SELECT `events`.* FROM `events`):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @events.each do |event| %>
+    16:       <tr>
+    17:         <td><%= event.typeID %></td>
+    18:         <td><%= event.description %></td>
+  app/views/events/index.html.erb:15:in `_app_views_events_index_html_erb__467549240644651181_70274069010680'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (8.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (17.8ms)
+
+
+Started GET "/followers/" for ::1 at 2015-03-21 20:30:14 -0400
+Processing by FollowersController#index as HTML
+  [1m[35mFollower Load (1.2ms)[0m  SELECT `followers`.* FROM `followers`
+Mysql::Error: Table 'rdev.followers' doesn't exist: SELECT `followers`.* FROM `followers`
+  Rendered followers/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.followers' doesn't exist: SELECT `followers`.* FROM `followers`):
+    19:   </thead>
+    20: 
+    21:   <tbody>
+    22:     <% @followers.each do |follower| %>
+    23:       <tr>
+    24:         <td><%= follower.typeID %></td>
+    25:         <td><%= follower.strength %></td>
+  app/views/followers/index.html.erb:22:in `_app_views_followers_index_html_erb__4282910935430163943_43977200'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/followers/" for ::1 at 2015-03-21 20:30:14 -0400
+Processing by FollowersController#index as HTML
+  [1m[36mFollower Load (0.6ms)[0m  [1mSELECT `followers`.* FROM `followers`[0m
+Mysql::Error: Table 'rdev.followers' doesn't exist: SELECT `followers`.* FROM `followers`
+  Rendered followers/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.followers' doesn't exist: SELECT `followers`.* FROM `followers`):
+    19:   </thead>
+    20: 
+    21:   <tbody>
+    22:     <% @followers.each do |follower| %>
+    23:       <tr>
+    24:         <td><%= follower.typeID %></td>
+    25:         <td><%= follower.strength %></td>
+  app/views/followers/index.html.erb:22:in `_app_views_followers_index_html_erb__4282910935430163943_70274068052400'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.4ms)
+
+
+Started GET "/acts/" for ::1 at 2015-03-21 20:30:17 -0400
+Processing by ActsController#index as HTML
+  [1m[35mAct Load (1.1ms)[0m  SELECT `acts`.* FROM `acts`
+Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`
+  Rendered acts/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @acts.each do |act| %>
+    19:       <tr>
+    20:         <td><%= act.typeID %></td>
+    21:         <td><%= act.goldCost %></td>
+  app/views/acts/index.html.erb:18:in `_app_views_acts_index_html_erb___2654292066019457581_47098460'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.7ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.8ms)
+
+
+Started GET "/acts/" for ::1 at 2015-03-21 20:30:18 -0400
+Processing by ActsController#index as HTML
+  [1m[36mAct Load (0.6ms)[0m  [1mSELECT `acts`.* FROM `acts`[0m
+Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`
+  Rendered acts/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.acts' doesn't exist: SELECT `acts`.* FROM `acts`):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @acts.each do |act| %>
+    19:       <tr>
+    20:         <td><%= act.typeID %></td>
+    21:         <td><%= act.goldCost %></td>
+  app/views/acts/index.html.erb:18:in `_app_views_acts_index_html_erb___2654292066019457581_31734760'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (17.9ms)
+
+
+Started GET "/monk_shugenja_attachments/" for ::1 at 2015-03-21 20:30:27 -0400
+Processing by MonkShugenjaAttachmentsController#index as HTML
+  [1m[35mMonkShugenjaAttachment Load (1.2ms)[0m  SELECT `monk_shugenja_attachments`.* FROM `monk_shugenja_attachments`
+Mysql::Error: Table 'rdev.monk_shugenja_attachments' doesn't exist: SELECT `monk_shugenja_attachments`.* FROM `monk_shugenja_attachments`
+  Rendered monk_shugenja_attachments/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.monk_shugenja_attachments' doesn't exist: SELECT `monk_shugenja_attachments`.* FROM `monk_shugenja_attachments`):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @monk_shugenja_attachments.each do |monk_shugenja_attachment| %>
+    19:       <tr>
+    20:         <td><%= monk_shugenja_attachment.typeID %></td>
+    21:         <td><%= monk_shugenja_attachment.goldCost %></td>
+  app/views/monk_shugenja_attachments/index.html.erb:18:in `_app_views_monk_shugenja_attachments_index_html_erb__524200014858889852_46192420'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.7ms)
+
+
+Started GET "/monk_shugenja_attachments/" for ::1 at 2015-03-21 20:30:28 -0400
+Processing by MonkShugenjaAttachmentsController#index as HTML
+  [1m[36mMonkShugenjaAttachment Load (0.6ms)[0m  [1mSELECT `monk_shugenja_attachments`.* FROM `monk_shugenja_attachments`[0m
+Mysql::Error: Table 'rdev.monk_shugenja_attachments' doesn't exist: SELECT `monk_shugenja_attachments`.* FROM `monk_shugenja_attachments`
+  Rendered monk_shugenja_attachments/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.monk_shugenja_attachments' doesn't exist: SELECT `monk_shugenja_attachments`.* FROM `monk_shugenja_attachments`):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @monk_shugenja_attachments.each do |monk_shugenja_attachment| %>
+    19:       <tr>
+    20:         <td><%= monk_shugenja_attachment.typeID %></td>
+    21:         <td><%= monk_shugenja_attachment.goldCost %></td>
+  app/views/monk_shugenja_attachments/index.html.erb:18:in `_app_views_monk_shugenja_attachments_index_html_erb__524200014858889852_70274060786820'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (8.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.0ms)
+
+
+Started GET "/personalitys/" for ::1 at 2015-03-21 20:30:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/personalitys"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.4ms)
+
+
+Started GET "/personalitys/" for ::1 at 2015-03-21 20:30:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/personalitys"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (21.1ms)
+
+
+Started GET "/regions/" for ::1 at 2015-03-21 20:30:39 -0400
+Processing by RegionsController#index as HTML
+  [1m[35mRegion Load (1.0ms)[0m  SELECT `regions`.* FROM `regions`
+Mysql::Error: Table 'rdev.regions' doesn't exist: SELECT `regions`.* FROM `regions`
+  Rendered regions/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.regions' doesn't exist: SELECT `regions`.* FROM `regions`):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @regions.each do |region| %>
+    17:       <tr>
+    18:         <td><%= region.typeID %></td>
+    19:         <td><%= region.keywords %></td>
+  app/views/regions/index.html.erb:16:in `_app_views_regions_index_html_erb__164449082447854001_70274058818420'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.3ms)
+
+
+Started GET "/regions/" for ::1 at 2015-03-21 20:30:39 -0400
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.8ms)[0m  [1mSELECT `regions`.* FROM `regions`[0m
+Mysql::Error: Table 'rdev.regions' doesn't exist: SELECT `regions`.* FROM `regions`
+  Rendered regions/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.regions' doesn't exist: SELECT `regions`.* FROM `regions`):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @regions.each do |region| %>
+    17:       <tr>
+    18:         <td><%= region.typeID %></td>
+    19:         <td><%= region.keywords %></td>
+  app/views/regions/index.html.erb:16:in `_app_views_regions_index_html_erb__164449082447854001_70274060440140'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.0ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.4ms)
+
+
+Started GET "/holdings/" for ::1 at 2015-03-21 20:30:44 -0400
+Processing by HoldingsController#index as HTML
+  [1m[35mHolding Load (1.1ms)[0m  SELECT `holdings`.* FROM `holdings`
+Mysql::Error: Table 'rdev.holdings' doesn't exist: SELECT `holdings`.* FROM `holdings`
+  Rendered holdings/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.holdings' doesn't exist: SELECT `holdings`.* FROM `holdings`):
+    16:   </thead>
+    17: 
+    18:   <tbody>
+    19:     <% @holdings.each do |holding| %>
+    20:       <tr>
+    21:         <td><%= holding.typeID %></td>
+    22:         <td><%= holding.goldCost %></td>
+  app/views/holdings/index.html.erb:19:in `_app_views_holdings_index_html_erb___2269104311048015511_43653880'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.1ms)
+
+
+Started GET "/holdings/" for ::1 at 2015-03-21 20:30:44 -0400
+Processing by HoldingsController#index as HTML
+  [1m[36mHolding Load (0.6ms)[0m  [1mSELECT `holdings`.* FROM `holdings`[0m
+Mysql::Error: Table 'rdev.holdings' doesn't exist: SELECT `holdings`.* FROM `holdings`
+  Rendered holdings/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Mysql::Error: Table 'rdev.holdings' doesn't exist: SELECT `holdings`.* FROM `holdings`):
+    16:   </thead>
+    17: 
+    18:   <tbody>
+    19:     <% @holdings.each do |holding| %>
+    20:       <tr>
+    21:         <td><%= holding.typeID %></td>
+    22:         <td><%= holding.goldCost %></td>
+  app/views/holdings/index.html.erb:19:in `_app_views_holdings_index_html_erb___2269104311048015511_70274063401620'
+
+
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/j/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (18.2ms)
