@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typeid</th>
+      <th>Keywords</th>
+      <th>Description</th>
+      <th>Focus</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rings.each do |ring| %>
+      <tr>
+        <td><%= ring.typeID %></td>
+        <td><%= ring.keywords %></td>
+        <td><%= ring.description %></td>
+        <td><%= ring.focus %></td>
+        <td><%= link_to 'Show', ring %></td>
+        <td><%= link_to 'Edit', edit_ring_path(ring) %></td>
+        <td><%= link_to 'Destroy', ring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ring', new_ring_path %>

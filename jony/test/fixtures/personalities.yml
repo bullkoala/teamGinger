@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typeID: 1
+  strength: 1
+  chi: 1
+  goldCost: 1
+  familyHonorRequirement: 1
+  personalHonor: 1
+  keywords: MyString
+  description: MyString
+  clan: MyString
+
+two:
+  typeID: 1
+  strength: 1
+  chi: 1
+  goldCost: 1
+  familyHonorRequirement: 1
+  personalHonor: 1
+  keywords: MyString
+  description: MyString
+  clan: MyString

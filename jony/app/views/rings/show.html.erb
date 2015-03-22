@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @ring.typeID %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @ring.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ring.description %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @ring.focus %>
+</p>
+
+<%= link_to 'Edit', edit_ring_path(@ring) %> |
+<%= link_to 'Back', rings_path %>
