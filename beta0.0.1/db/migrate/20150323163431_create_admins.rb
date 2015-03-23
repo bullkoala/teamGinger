@@ -1,8 +1,6 @@
 class CreateAdmins < ActiveRecord::Migration
   def change
-    create_table :admins do |t|
-      t.string :name
-      t.text :authentication
+    create_table unless table_exists? :admins do |t|
 
       t.timestamps null: false
     end
