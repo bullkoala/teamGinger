@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :personalities
+  resources :admins
+  get 'admin/index'
   get 'welcome/index'
 
+  resources :personalities
   resources :winds
   resources :users
   resources :types
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
   resources :attachments
   resources :actions
   resources :users
+  resources :admin
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
