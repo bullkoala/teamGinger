@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321180403) do
+ActiveRecord::Schema.define(version: 20150323034532) do
 
   create_table "acts", primary_key: "title", force: :cascade do |t|
     t.integer "typeID",      limit: 1,   null: false
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20150321180403) do
   end
 
   add_index "acts", ["typeID"], name: "typeID", using: :btree
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "name",           limit: 255
+    t.text     "authentication", limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
   create_table "attachments", primary_key: "title", force: :cascade do |t|
     t.integer "typeID",      limit: 1,   null: false
