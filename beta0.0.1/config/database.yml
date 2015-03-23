@@ -9,12 +9,19 @@ default: &default
   pool: 5
   timeout: 5000
 
+#development:
+#  adapter: mysql
+#  database: reference_project
+#  username: root
+#  password:
+#  socket: /run/mysqld/mysqld.sock
+
 development:
-  adapter: mysql
-  database: reference_project
-  username: root
+  adapter:     mysql
+  database:    reference_project
+  username:    rdev
   password:
-  socket: /run/mysqld/mysqld.sock
+  socket:      /run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
