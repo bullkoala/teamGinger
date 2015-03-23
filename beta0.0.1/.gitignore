@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore database.yml
+beta0.0.1/config/database.yml
