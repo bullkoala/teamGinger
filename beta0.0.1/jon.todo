@@ -1,0 +1,7 @@
+-def to_s to format table names (model)
+
+-index do
+    column :name
+ to define cols in admin panel display items
+
+** ActiveAdmin config settings in config/initializers/active_admin.rb
