@@ -1,3 +1,7 @@
+#So Branch will stop overwriting the fucking database.yml file instead of 
+#USING THE COMMENTED LINES THAT ARE ALREADY THERE YOU FUCKER
+**/database.yml
+
 # Because Jon has no idea what he's doing
 # Because it's really supposed to go in a global ignore, let's put it here
 **/.swp
