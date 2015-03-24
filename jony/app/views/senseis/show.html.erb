@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @sensei.typeID %>
+</p>
+
+<p>
+  <strong>Provincestrength:</strong>
+  <%= @sensei.provinceStrength %>
+</p>
+
+<p>
+  <strong>Goldproduction:</strong>
+  <%= @sensei.goldProduction %>
+</p>
+
+<p>
+  <strong>Familyhonor:</strong>
+  <%= @sensei.familyHonor %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @sensei.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sensei.description %>
+</p>
+
+<%= link_to 'Edit', edit_sensei_path(@sensei) %> |
+<%= link_to 'Back', senseis_path %>

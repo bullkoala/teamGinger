@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeid:</strong>
+  <%= @stronghold.typeID %>
+</p>
+
+<p>
+  <strong>Provincestrength:</strong>
+  <%= @stronghold.provinceStrength %>
+</p>
+
+<p>
+  <strong>Familyhonor:</strong>
+  <%= @stronghold.familyHonor %>
+</p>
+
+<p>
+  <strong>Goldproduction:</strong>
+  <%= @stronghold.goldProduction %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @stronghold.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @stronghold.description %>
+</p>
+
+<p>
+  <strong>Clan:</strong>
+  <%= @stronghold.clan %>
+</p>
+
+<%= link_to 'Edit', edit_stronghold_path(@stronghold) %> |
+<%= link_to 'Back', strongholds_path %>

@@ -1,0 +1,53 @@
+<%= form_for(@personality) do |f| %>
+  <% if @personality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personality.errors.count, "error") %> prohibited this personality from being saved:</h2>
+
+      <ul>
+      <% @personality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :typeID %><br>
+    <%= f.number_field :typeID %>
+  </div>
+  <div class="field">
+    <%= f.label :strength %><br>
+    <%= f.number_field :strength %>
+  </div>
+  <div class="field">
+    <%= f.label :chi %><br>
+    <%= f.number_field :chi %>
+  </div>
+  <div class="field">
+    <%= f.label :goldCost %><br>
+    <%= f.number_field :goldCost %>
+  </div>
+  <div class="field">
+    <%= f.label :familyHonorRequirement %><br>
+    <%= f.number_field :familyHonorRequirement %>
+  </div>
+  <div class="field">
+    <%= f.label :personalHonor %><br>
+    <%= f.number_field :personalHonor %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br>
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :clan %><br>
+    <%= f.text_field :clan %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
