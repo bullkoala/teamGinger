@@ -22,6 +22,11 @@
   </tbody>
 </table>
 
+<%= form_tag(types_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Types" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
 <br>
 
 <%= link_to 'New Type', new_type_path %>
