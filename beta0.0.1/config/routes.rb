@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  resources :admins
-  get 'admin/index'
   get 'welcome/index'
 
   resources :personalities
@@ -13,19 +9,13 @@ Rails.application.routes.draw do
   resources :senseis
   resources :rings
   resources :regions
-  resources :personalities
   resources :monk_shugenja_attachments
   resources :holdings
   resources :followers
   resources :events
   resources :attachments
   resources :acts
-  resources :actions
   resources :regions
-  resources :attachments
-  resources :actions
-  resources :users
-  resources :admin
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
