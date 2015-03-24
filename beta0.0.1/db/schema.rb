@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150321180403) do
 
-  create_table "Ring", primary_key: "title", force: :cascade do |t|
-    t.integer "typeID",      limit: 1,   null: false
-    t.string  "keywords",    limit: 75
-    t.string  "description", limit: 500
-    t.integer "focus",       limit: 1
-  end
-
-  add_index "Ring", ["typeID"], name: "typeID", using: :btree
-
   create_table "acts", primary_key: "title", force: :cascade do |t|
     t.integer "typeID",      limit: 1,   null: false
     t.integer "goldCost",    limit: 1
@@ -159,7 +150,6 @@ ActiveRecord::Schema.define(version: 20150321180403) do
 
   add_index "winds", ["typeID"], name: "typeID", using: :btree
 
-  add_foreign_key "Ring", "Types", column: "typeID", primary_key: "typeID", name: "Ring_ibfk_1"
   add_foreign_key "acts", "types", column: "typeID", primary_key: "typeID", name: "acts_ibfk_1", on_update: :cascade, on_delete: :cascade
   add_foreign_key "attachments", "types", column: "typeID", primary_key: "typeID", name: "attachments_ibfk_1", on_update: :cascade, on_delete: :cascade
   add_foreign_key "events", "types", column: "typeID", primary_key: "typeID", name: "events_ibfk_1", on_update: :cascade, on_delete: :cascade
