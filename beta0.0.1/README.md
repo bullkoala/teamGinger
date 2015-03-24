@@ -96,7 +96,7 @@ $ rails server
 $ rails server -b your_network_ip_here -p 3000
 ```
 
-  * Okay! Now we can pop open a browers and direct ourselves to localhost:3000 (if you used the first command) or your_network_ip_here:3000 (if you used the second command).
+  * Okay! Now we can pop open a browers and direct ourselves to [localhost:3000](http://localhost:3000) (if you used the first command) or your_network_ip_here:3000 (if you used the second command).
 
 I hope it works. 
 

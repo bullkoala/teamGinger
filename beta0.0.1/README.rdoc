@@ -80,6 +80,13 @@
 	$ rake db:migrate
 	```
 
+*Rake the database
+	
+	```
+	$ rake db:migrate
+	```
+
+
 *Launch the WEBrick Server.
 	
 	```
