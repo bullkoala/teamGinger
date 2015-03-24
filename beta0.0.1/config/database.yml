@@ -12,8 +12,8 @@ default: &default
 development:
   adapter: mysql
   database: reference_project
-  username: root
-  password: wtfman17
+  username: rdev
+  password: 
   socket: /run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
