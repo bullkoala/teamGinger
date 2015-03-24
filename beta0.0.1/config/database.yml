@@ -9,13 +9,6 @@ default: &default
   pool: 5
   timeout: 5000
 
-#development:
-#  adapter: mysql
-#  database: reference_project
-#  username: root
-#  password:
-#  socket: /run/mysqld/mysqld.sock
-
 development:
   adapter:     mysql
   database:    reference_project

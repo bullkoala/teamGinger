@@ -61,6 +61,8 @@ class TypesController < ApplicationController
     end
   end
 
+  #SEARCH FOR TYPES
+
   def index
     if params[:search]
       @types = Type.search(params[:search]).order('typeName DESC')
