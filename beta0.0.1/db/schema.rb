@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150321180403) do
 
-  create_table "Ring", primary_key: "title", force: :cascade do |t|
-    t.integer "typeID",      limit: 1,   null: false
-    t.string  "keywords",    limit: 75
-    t.string  "description", limit: 500
-    t.integer "focus",       limit: 1
-  end
-
-  add_index "Ring", ["typeID"], name: "typeID", using: :btree
-
   create_table "acts", primary_key: "title", force: :cascade do |t|
     t.integer "typeID",      limit: 1,   null: false
     t.integer "goldCost",    limit: 1
