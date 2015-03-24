@@ -74,7 +74,7 @@ mysql> source ~/teamginger/scripts/insert.sql;
 $ cd ~/teamginger/beta0.0.1/
 ```
   
-  *Rake the database.
+  * Rake the database.
 
 ```
 $ rake db:migrate

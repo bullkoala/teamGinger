@@ -17,11 +17,19 @@ default: &default
 #  socket: /run/mysqld/mysqld.sock
 
 development:
+<<<<<<< HEAD:jony/config/database.yml
   adapter:     mysql
   database:    reference_project
   username:    rdev
   password:
   socket:      /run/mysqld/mysqld.sock
+=======
+  adapter: mysql
+  database: reference_project
+  username: root
+  password: wtfman17
+  socket: /run/mysqld/mysqld.sock
+>>>>>>> search:beta0.0.1/config/database.yml
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
