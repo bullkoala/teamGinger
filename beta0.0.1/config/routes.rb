@@ -1,13 +1,8 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-<<<<<<< Updated upstream
-
-=======
   resources :admins
-  get 'admin/index'
-  get 'welcome/index'
->>>>>>> Stashed changes
 
   resources :personalities
   resources :winds

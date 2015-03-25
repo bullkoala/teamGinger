@@ -9,3 +9,6 @@
 -Foreign keys through active admin (migration)
   --http://edgeguides.rubyonrails.org/active_record_migrations.html
   --section 3.6
+
+--Concerns:
+    --http://richonrails.com/articles/rails-4-code-concerns-in-active-record-models
