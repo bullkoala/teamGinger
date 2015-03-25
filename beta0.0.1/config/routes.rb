@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+<<<<<<< Updated upstream
+
+=======
+  resources :admins
+  get 'admin/index'
   get 'welcome/index'
+>>>>>>> Stashed changes
 
   resources :personalities
   resources :winds
@@ -22,7 +28,8 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+  # Site roote
+  get 'welcome/index'
   root 'welcome#index'
 
   # Example of regular route:
