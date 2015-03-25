@@ -5,3 +5,7 @@
  to define cols in admin panel display items
 
 ** ActiveAdmin config settings in config/initializers/active_admin.rb
+
+-Foreign keys through active admin (migration)
+  --http://edgeguides.rubyonrails.org/active_record_migrations.html
+  --section 3.6
