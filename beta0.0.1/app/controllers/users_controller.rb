@@ -36,8 +36,6 @@ class UsersController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
@@ -57,7 +55,6 @@ class UsersController < ApplicationController
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

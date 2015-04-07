@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  devise_for :users, ActiveAdmin::Devise.config
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :admins
 
+  resources :admins
   resources :personalities
   resources :winds
   resources :users
@@ -26,6 +27,8 @@ Rails.application.routes.draw do
   # Site roote
   get 'welcome/index'
   root 'welcome#index'
+#  get 'user/index'
+#  root 'users/#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

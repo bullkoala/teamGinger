@@ -1,14 +1,71 @@
-<h1>455 Reference Project</h1>
-<p>
-<h2>Please select from the following tables:</h2>
-<table>
-  <tr>
-    <% @list_of_tables.each do |table| %>
-      <tr>
-	<td><%= table %></td>
-      </tr>
-    <% end %>
+<p id="notice"><%= notice %></p>
 
-   </tr>
+<h1>Listing Garbage</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Searchable Card Attributes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <%#<%@tables.each do |table| %>
+      <%#<td><%= link_to 'Edit', edit_table_path(table) %></td>
+      
+      <tr>
+	<!--<td> Actions </td>-->
+	<td><%= link_to 'Actions', acts_path %></td>
+      <tr>
+        <!--<td> Attachments </td>-->
+	<td><%= link_to 'Attachments', attachments_path %></td>
+      <tr>
+        <!--<td> Events </td>-->
+	<td><%= link_to 'Events', events_path %></td>
+      <tr>
+        <!--<td> Followers </td>-->
+	<td><%= link_to 'Followers', followers_path %></td>
+      <tr>
+        <!--<td> Holdings </td>-->
+	<td><%= link_to 'Holdings', holdings_path %></td>
+      <tr>
+        <!--<td> Monk-Shugenja Attachments </td>-->
+	<td><%= link_to 'Monk-Shugenja Attachments', monk_shugenja_attachments_path %></td>
+      <tr>
+        <!--<td> Personalities </td>-->
+	<td><%= link_to 'Personalities', personalities_path %></td>
+      </tr>
+      <tr>
+        <!--<td> Regions </td>-->
+	<td><%= link_to 'Regions', regions_path %></td>
+      </tr>
+      <tr>
+        <!--<td> Rings </td>-->
+	<td><%= link_to 'Rings', rings_path %></td>
+      </tr>
+      <tr>
+        <!--<td> Senseis </td>-->
+	<td><%= link_to 'Senseis', senseis_path %></td>
+      </tr>
+      <tr>
+        <!--<td> Strongholds </td>-->
+	<td><%= link_to 'Strongholds', strongholds_path %></td>
+      </tr>
+      <tr>
+        <!--<td> Types </td>-->
+	<td><%= link_to 'Types', types_path %></td>
+      </tr>
+      <tr>
+      <!--<td> Winds </td>-->
+	<td><%= link_to 'Winds', winds_path %></td>
+      </tr>
+    <%# end %>
+  </tbody>
 </table>
-</p>
+
+<%#<%= form_tag( %>
+
+<br>
+
+<%#= link_to 'New User', new_user_path %>

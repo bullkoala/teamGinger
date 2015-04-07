@@ -1,4 +1,7 @@
 ActiveAdmin.register User do
+#  sidebar 'Available card criteria', :only => :show do
+#   table_for = Act, Attachment, Event
+#  end
 
 
   # See permitted parameters documentation:
