@@ -1,3 +1,3 @@
 class Stronghold < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

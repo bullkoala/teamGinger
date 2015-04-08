@@ -1,3 +1,3 @@
 class Region < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

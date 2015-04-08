@@ -1,3 +1,3 @@
 class Attachment < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

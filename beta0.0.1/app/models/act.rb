@@ -1,3 +1,3 @@
 class Act < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

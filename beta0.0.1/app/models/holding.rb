@@ -1,3 +1,3 @@
 class Holding < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

@@ -1,3 +1,3 @@
 class MonkShugenjaAttachment < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

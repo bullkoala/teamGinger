@@ -1,5 +1,5 @@
 class Type < ActiveRecord::Base
-  include SearchHelper
+  include Search
 
 #  has_many :acts, :attachments, :events, :followers, :holdings, :monk_shugenja_attachments, :personalities, :regions, :rings, :senseis, :strongholds, :winds
 
@@ -7,7 +7,7 @@ class Type < ActiveRecord::Base
 
   #self.search is class method declaration
   #def search would be an instance method declaration
-  def self.search(query)
+  def self.searcher(query)
     where("typename like ?", "%#{query}")
   end
 

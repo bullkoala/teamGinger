@@ -1,3 +1,3 @@
 class Ring < ActiveRecord::Base
-  include SearchHelper
+  include Search
 end

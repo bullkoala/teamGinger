@@ -15,15 +15,15 @@
       <tr>
         <td><%= type.typeName %></td>
         <td><%= link_to 'Show', type %></td>
-        <td><%= link_to 'Edit', edit_type_path(type) %></td>
-        <td><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<!--        <td><%= link_to 'Edit', edit_type_path(type) %></td>
+   <td><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <%= form_tag(types_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Types" %>
+      <%= text_field_tag :searcher, params[:searcher], placeholder: "Search Types" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
 
