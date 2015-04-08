@@ -12,3 +12,7 @@
 
 --Concerns:
     --http://richonrails.com/articles/rails-4-code-concerns-in-active-record-models
+
+-VIEW: information displayed to a user when viewing their profile
+	-no need for primary key id, saved search id, etc.
+		-i.e. remove internal transaction identification information
