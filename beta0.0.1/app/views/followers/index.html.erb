@@ -2,9 +2,16 @@
 
 <h1>Listing Followers</h1>
 
+<%= form_tag(followers_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Followers" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Strength</th>
       <th>Chi</th>
@@ -21,6 +28,7 @@
   <tbody>
     <% @followers.each do |follower| %>
       <tr>
+        <td><%= follower.title %></td>
         <td><%= follower.typeID %></td>
         <td><%= follower.strength %></td>
         <td><%= follower.chi %></td>
