@@ -61,6 +61,15 @@ class MonkShugenjaAttachmentsController < ApplicationController
     end
   end
 
+  #SEARCH monk shugenja attachments
+  def index
+    if params[:search]
+      @monk_shugenja_attachments = MonkShugenjaAttachment.search(params[:search]).order('title DESC')
+    else
+      @monk_shugenja_attachments = MonkShugenjaAttachment.all.order('title DESC')
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_monk_shugenja_attachment
