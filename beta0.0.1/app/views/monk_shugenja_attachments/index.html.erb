@@ -2,9 +2,16 @@
 
 <h1>Listing Monk Shugenja Attachments</h1>
 
+<%= form_tag(monk_shugenja_attachments_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Monk Attachments" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Goldcost</th>
       <th>Keywords</th>
@@ -17,6 +24,7 @@
   <tbody>
     <% @monk_shugenja_attachments.each do |monk_shugenja_attachment| %>
       <tr>
+        <td><%= monk_shugenja_attachment.title %></td>
         <td><%= monk_shugenja_attachment.typeID %></td>
         <td><%= monk_shugenja_attachment.goldCost %></td>
         <td><%= monk_shugenja_attachment.keywords %></td>
