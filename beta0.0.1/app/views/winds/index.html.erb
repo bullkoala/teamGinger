@@ -2,9 +2,16 @@
 
 <h1>Listing Winds</h1>
 
+<%= form_tag(winds_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Winds" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Keywords</th>
       <th>Description</th>
@@ -15,6 +22,7 @@
   <tbody>
     <% @winds.each do |wind| %>
       <tr>
+        <td><%= wind.title %></td>
         <td><%= wind.typeID %></td>
         <td><%= wind.keywords %></td>
         <td><%= wind.description %></td>

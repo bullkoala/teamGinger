@@ -61,6 +61,14 @@ class StrongholdsController < ApplicationController
     end
   end
 
+  def index
+    if params[:search]
+      @strongholds = Stronghold.search(params[:search]).order('title DESC')
+    else
+      @strongholds = Stronghold.all.order('title DESC')
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stronghold

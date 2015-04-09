@@ -2,9 +2,16 @@
 
 <h1>Listing Senseis</h1>
 
+<%= form_tag(senseis_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Senseis" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Provincestrength</th>
       <th>Goldproduction</th>
@@ -18,6 +25,7 @@
   <tbody>
     <% @senseis.each do |sensei| %>
       <tr>
+        <td><%= sensei.title %></td>
         <td><%= sensei.typeID %></td>
         <td><%= sensei.provinceStrength %></td>
         <td><%= sensei.goldProduction %></td>

@@ -2,9 +2,16 @@
 
 <h1>Listing Strongholds</h1>
 
+<%= form_tag(strongholds_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Strongholds" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Provincestrength</th>
       <th>Familyhonor</th>
@@ -19,6 +26,7 @@
   <tbody>
     <% @strongholds.each do |stronghold| %>
       <tr>
+        <td><%= stronghold.title %></td>
         <td><%= stronghold.typeID %></td>
         <td><%= stronghold.provinceStrength %></td>
         <td><%= stronghold.familyHonor %></td>
