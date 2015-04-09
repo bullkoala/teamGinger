@@ -61,6 +61,15 @@ class RegionsController < ApplicationController
     end
   end
 
+  def index
+    if params[:search]
+      @regions = Region.search(params[:search]).order('title DESC')
+    else
+      @regions = Region.all.order('title DESC')
+    end
+  end    
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_region

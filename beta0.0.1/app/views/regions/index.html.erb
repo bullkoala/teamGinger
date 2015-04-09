@@ -2,8 +2,8 @@
 
 <h1>Listing Regions</h1>
 
-<%= form_tag(personalities_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Personalities" %>
+<%= form_tag(regions_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Regions" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
 <br>
@@ -11,6 +11,7 @@
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Keywords</th>
       <th>Description</th>
@@ -21,6 +22,7 @@
   <tbody>
     <% @regions.each do |region| %>
       <tr>
+        <td><%= region.title %></td>
         <td><%= region.typeID %></td>
         <td><%= region.keywords %></td>
         <td><%= region.description %></td>
