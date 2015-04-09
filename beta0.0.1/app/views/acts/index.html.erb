@@ -2,6 +2,13 @@
 
 <h1>Listing Acts</h1>
 
+<%= form_tag(acts_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Acts" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+<br>
+
 <table>
   <thead>
     <tr>
@@ -29,6 +36,8 @@
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 

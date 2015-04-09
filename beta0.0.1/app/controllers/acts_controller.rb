@@ -61,6 +61,15 @@ class ActsController < ApplicationController
     end
   end
 
+  def index
+    if params[:search]
+      @acts = Act.search(params[:search]).order('title DESC')
+    else
+      @acts = Act.all.order('title DESC')
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_act

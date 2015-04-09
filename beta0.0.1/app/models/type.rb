@@ -1,5 +1,5 @@
 class Type < ActiveRecord::Base
-  include Search
+
 
 #  has_many :acts, :attachments, :events, :followers, :holdings, :monk_shugenja_attachments, :personalities, :regions, :rings, :senseis, :strongholds, :winds
 

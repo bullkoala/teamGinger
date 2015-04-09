@@ -1,3 +1,6 @@
 class Act < ActiveRecord::Base
-  include Search
+  def self.search(query)
+  	where("actname like ?", "%#{query}")
+  end
+
 end
