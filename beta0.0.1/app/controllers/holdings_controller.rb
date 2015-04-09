@@ -61,6 +61,14 @@ class HoldingsController < ApplicationController
     end
   end
 
+  def index
+    if params[:search]
+      @holdings = Holding.search(params[:search]).order('title DESC')
+    else
+      @holdings = Holding.all.order('title DESC')
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_holding

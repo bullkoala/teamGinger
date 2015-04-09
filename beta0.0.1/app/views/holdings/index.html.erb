@@ -2,9 +2,16 @@
 
 <h1>Listing Holdings</h1>
 
+<%= form_tag(holdings_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Holdings" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Goldcost</th>
       <th>Goldproduction</th>
@@ -18,6 +25,7 @@
   <tbody>
     <% @holdings.each do |holding| %>
       <tr>
+        <td><%= holding.title %></td>
         <td><%= holding.typeID %></td>
         <td><%= holding.goldCost %></td>
         <td><%= holding.goldProduction %></td>
