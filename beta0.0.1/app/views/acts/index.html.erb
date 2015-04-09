@@ -12,6 +12,7 @@
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Goldcost</th>
       <th>Keywords</th>
@@ -24,6 +25,7 @@
   <tbody>
     <% @acts.each do |act| %>
       <tr>
+        <td><%= act.title %></td>
         <td><%= act.typeID %></td>
         <td><%= act.goldCost %></td>
         <td><%= act.keywords %></td>
