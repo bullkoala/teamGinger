@@ -23,7 +23,7 @@
 </table>
 
 <%= form_tag(types_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :searcher, params[:searcher], placeholder: "Search Types" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Types" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
 

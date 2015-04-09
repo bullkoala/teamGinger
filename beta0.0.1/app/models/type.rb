@@ -7,7 +7,7 @@ class Type < ActiveRecord::Base
 
   #self.search is class method declaration
   #def search would be an instance method declaration
-  def self.searcher(query)
+  def self.search(query)
     where("typename like ?", "%#{query}")
   end
 
