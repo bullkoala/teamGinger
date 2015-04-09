@@ -61,6 +61,14 @@ class AttachmentsController < ApplicationController
     end
   end
 
+  def index
+    if params[:search]
+      @attachments = Attachment.search(params[:search]).order('title DESC')
+    else
+      @attachments = Attachment.all.order('title DESC')
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_attachment
