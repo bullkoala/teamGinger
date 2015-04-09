@@ -2,9 +2,16 @@
 
 <h1>Listing Personalities</h1>
 
+<%= form_tag(personalities_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Personalities" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+<br>
+
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Typeid</th>
       <th>Strength</th>
       <th>Chi</th>
@@ -21,6 +28,7 @@
   <tbody>
     <% @personalities.each do |personality| %>
       <tr>
+        <td><%= personality.title %></td>
         <td><%= personality.typeID %></td>
         <td><%= personality.strength %></td>
         <td><%= personality.chi %></td>
