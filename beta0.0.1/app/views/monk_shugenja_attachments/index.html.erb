@@ -3,16 +3,10 @@
 <h1>Listing Monk Shugenja Attachments</h1>
 
 <%= form_tag(monk_shugenja_attachments_path, :method => "get", id: "search-form") do %>
-<<<<<<< HEAD
       <%= text_field_tag :search, params[:search], placeholder: "Search Monk Attachments" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
-=======
-  <%= text_field_tag :search, params[:search], placeholder: "Search Monk Shugenja Attachments" %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
 
->>>>>>> 315218d46063b119f18ad50ee1a61cd9d5a4cab3
 <br>
 
 <table>
