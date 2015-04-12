@@ -1,5 +1,6 @@
 class HoldingsController < ApplicationController
-  before_action :set_holding, only: [:show, :edit, :update, :destroy]
+  # before_action :set_holding, only: [:show, :edit, :update, :destroy]
+  before_action :set_holding, only: [:show]
 
   # GET /holdings
   # GET /holdings.json

@@ -1,6 +1,6 @@
 class ActsController < ApplicationController
- # before_action :set_act, only: [:show, :edit, :update, :destroy]
- before_action :set_act, only: [:show]
+  # before_action :set_act, only: [:show, :edit, :update, :destroy]
+  before_action :set_act, only: [:show]
 
   # GET /acts
   # GET /acts.json

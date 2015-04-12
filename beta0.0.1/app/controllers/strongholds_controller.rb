@@ -1,5 +1,6 @@
 class StrongholdsController < ApplicationController
-  before_action :set_stronghold, only: [:show, :edit, :update, :destroy]
+  #before_action :set_stronghold, only: [:show, :edit, :update, :destroy]
+  before_action :set_stronghold, only: [:show]
 
   # GET /strongholds
   # GET /strongholds.json

@@ -1,5 +1,6 @@
 class SenseisController < ApplicationController
-  before_action :set_sensei, only: [:show, :edit, :update, :destroy]
+  #before_action :set_sensei, only: [:show, :edit, :update, :destroy]
+  before_action :set_sensei, only: [:show]
 
   # GET /senseis
   # GET /senseis.json

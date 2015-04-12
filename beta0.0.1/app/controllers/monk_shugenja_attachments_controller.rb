@@ -1,5 +1,6 @@
 class MonkShugenjaAttachmentsController < ApplicationController
-  before_action :set_monk_shugenja_attachment, only: [:show, :edit, :update, :destroy]
+  # before_action :set_monk_shugenja_attachment, only: [:show, :edit, :update, :destroy]
+  before_action :set_monk_shugenja_attachment, only: [:show]
 
   # GET /monk_shugenja_attachments
   # GET /monk_shugenja_attachments.json

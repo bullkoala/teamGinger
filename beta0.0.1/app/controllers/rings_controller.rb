@@ -1,5 +1,6 @@
 class RingsController < ApplicationController
-  before_action :set_ring, only: [:show, :edit, :update, :destroy]
+  #before_action :set_ring, only: [:show, :edit, :update, :destroy]
+  before_action :set_ring, only: [:show]
 
   # GET /rings
   # GET /rings.json

@@ -1,5 +1,6 @@
 class FollowersController < ApplicationController
-  before_action :set_follower, only: [:show, :edit, :update, :destroy]
+  # before_action :set_follower, only: [:show, :edit, :update, :destroy]
+  before_action :set_follower, only: [:show]
 
   # GET /followers
   # GET /followers.json

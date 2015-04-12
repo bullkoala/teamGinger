@@ -1,5 +1,6 @@
 class PersonalitiesController < ApplicationController
-  before_action :set_personality, only: [:show, :edit, :update, :destroy]
+  #before_action :set_personality, only: [:show, :edit, :update, :destroy]
+  before_action :set_personality, only: [:show]
 
   # GET /personalities
   # GET /personalities.json

@@ -1,5 +1,6 @@
 class WindsController < ApplicationController
-  before_action :set_wind, only: [:show, :edit, :update, :destroy]
+  #before_action :set_wind, only: [:show, :edit, :update, :destroy]
+  before_action :set_wind, only: [:show]
 
   # GET /winds
   # GET /winds.json
