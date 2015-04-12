@@ -23,11 +23,12 @@ ActiveAdmin.register_page "Dashboard" do
     #     end
     #   end
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
-    # end
+       columns do
+	 column do
+	   panel "Info" do
+	     para "Welcome to ActiveAdmin."
+	   end
+	 end
+       end
   end # content
 end

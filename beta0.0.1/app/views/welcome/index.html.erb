@@ -1,69 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Team Ginger</title>
+  </head>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Welcome to TeamGinger:</h1>
+<!--<h1>Welcome to TeamGinger:</h1>-->
 <h1>Legend of the Five Rings database </h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Searchable Card Attributes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= link_to "Welcome", '#'%>
+      <nav>
+	<ul class="nav navbar-nav navbar-right">
+	  <li><%= link_to "Home",   '#' %></li>
+	  <li><%= link_to "Log in", admin_user_path %></li>
+	</ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <table>
+      <thead>
+	<tr>
+	  <th>Searchable Card Attributes</th>
+	  <th colspan="3"></th>
+	</tr>
+      </thead>
 
-  <tbody>
-      <%#<%@tables.each do |table| %>
-      <%#<td><%= link_to 'Edit', edit_table_path(table) %></td>
-      
-      <tr>
-	<td> Actions </td>
-	<td><%= link_to 'View all Actions', acts_path %></td>
-      <tr>
-        <td> Attachments </td>
-	<td><%= link_to 'View all Attachments', attachments_path %></td>
-      <tr>
-        <td> Events </td>
-	<td><%= link_to 'View all Events', events_path %></td>
-      <tr>
-        <td> Followers </td>
-	<td><%= link_to 'View all Followers', followers_path %></td>
-      <tr>
-        <td> Holdings </td>
-	<td><%= link_to 'View all Holdings', holdings_path %></td>
-      <tr>
-        <td> Monk-Shugenja Attachments </td>
-	<td><%= link_to 'View all Monk-Shugenja Attachments', monk_shugenja_attachments_path %></td>
-      <tr>
-        <td> Personalities </td>
-	<td><%= link_to 'View all Personalities', personalities_path %></td>
-      </tr>
-      <tr>
-        <td> Regions </td>
-	<td><%= link_to 'View all Regions', regions_path %></td>
-      </tr>
-      <tr>
-        <td> Rings </td>
-	<td><%= link_to 'View all Rings', rings_path %></td>
-      </tr>
-      <tr>
-        <td> Senseis </td>
-	<td><%= link_to 'View all Senseis', senseis_path %></td>
-      </tr>
-      <tr>
-        <td> Strongholds </td>
-	<td><%= link_to 'View all Strongholds', strongholds_path %></td>
-      </tr>
-      <tr>
-        <td> Types </td>
-	<td><%= link_to 'View all Types', types_path %></td>
-      </tr>
-      <tr>
-      <td> Winds </td>
-	<td><%= link_to 'View all Winds', winds_path %></td>
-      </tr>
-    <%# end %>
-  </tbody>
-</table>
-<br>
-
-<%= link_to 'Admin', admin_user_path %>
+      <tbody>
+	  <%#<%@tables.each do |table| %>
+	  <%#<td><%= link_to 'Edit', edit_table_path(table) %></td>
+	  
+	  <tr>
+	    <td> Actions </td>
+	    <td><%= link_to 'View all Actions', acts_path %></td>
+	  <tr>
+	    <td> Attachments </td>
+	    <td><%= link_to 'View all Attachments', attachments_path %></td>
+	  <tr>
+	    <td> Events </td>
+	    <td><%= link_to 'View all Events', events_path %></td>
+	  <tr>
+	    <td> Followers </td>
+	    <td><%= link_to 'View all Followers', followers_path %></td>
+	  <tr>
+	    <td> Holdings </td>
+	    <td><%= link_to 'View all Holdings', holdings_path %></td>
+	  <tr>
+	    <td> Monk-Shugenja Attachments </td>
+	    <td><%= link_to 'View all Monk-Shugenja Attachments', monk_shugenja_attachments_path %></td>
+	  <tr>
+	    <td> Personalities </td>
+	    <td><%= link_to 'View all Personalities', personalities_path %></td>
+	  </tr>
+	  <tr>
+	    <td> Regions </td>
+	    <td><%= link_to 'View all Regions', regions_path %></td>
+	  </tr>
+	  <tr>
+	    <td> Rings </td>
+	    <td><%= link_to 'View all Rings', rings_path %></td>
+	  </tr>
+	  <tr>
+	    <td> Senseis </td>
+	    <td><%= link_to 'View all Senseis', senseis_path %></td>
+	  </tr>
+	  <tr>
+	    <td> Strongholds </td>
+	    <td><%= link_to 'View all Strongholds', strongholds_path %></td>
+	  </tr>
+	  <tr>
+	    <td> Types </td>
+	    <td><%= link_to 'View all Types', types_path %></td>
+	  </tr>
+	  <tr>
+	    <td> Winds </td>
+	    <td><%= link_to 'View all Winds', winds_path %></td>
+	  </tr>
+	<%# end %>
+      </tbody>
+    </table>
+    <br>
+  </div>
+</body>
