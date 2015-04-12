@@ -33,13 +33,10 @@
         <td><%= sensei.keywords %></td>
         <td><%= sensei.description %></td>
         <td><%= link_to 'Show', sensei %></td>
-        <td><%= link_to 'Edit', edit_sensei_path(sensei) %></td>
-        <td><%= link_to 'Destroy', sensei, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Sensei', new_sensei_path %>

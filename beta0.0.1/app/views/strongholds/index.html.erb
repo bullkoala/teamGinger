@@ -35,13 +35,9 @@
         <td><%= stronghold.description %></td>
         <td><%= stronghold.clan %></td>
         <td><%= link_to 'Show', stronghold %></td>
-        <td><%= link_to 'Edit', edit_stronghold_path(stronghold) %></td>
-        <td><%= link_to 'Destroy', stronghold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Stronghold', new_stronghold_path %>

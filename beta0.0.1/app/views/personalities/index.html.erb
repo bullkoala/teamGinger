@@ -39,13 +39,10 @@
         <td><%= personality.description %></td>
         <td><%= personality.clan %></td>
         <td><%= link_to 'Show', personality %></td>
-        <td><%= link_to 'Edit', edit_personality_path(personality) %></td>
-        <td><%= link_to 'Destroy', personality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Personality', new_personality_path %>
