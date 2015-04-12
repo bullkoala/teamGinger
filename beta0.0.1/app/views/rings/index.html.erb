@@ -29,13 +29,10 @@
         <td><%= ring.description %></td>
         <td><%= ring.focus %></td>
         <td><%= link_to 'Show', ring %></td>
-        <td><%= link_to 'Edit', edit_ring_path(ring) %></td>
-        <td><%= link_to 'Destroy', ring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Ring', new_ring_path %>
