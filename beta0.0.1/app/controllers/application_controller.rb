@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   # Restrict access to the site to only the index and show pages
-  before_filter :authenticate_user!, 
-    except: [ :index, :show ]
+#  before_filter :authenticate_user!, 
+#    except: [ :index, :show ]
   
 #  helper_method :search
 
