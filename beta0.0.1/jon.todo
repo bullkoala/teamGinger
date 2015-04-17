@@ -16,3 +16,17 @@
 -VIEW: information displayed to a user when viewing their profile
 	-no need for primary key id, saved search id, etc.
 		-i.e. remove internal transaction identification information
+
+Started POST "/users" for ::1 at 2015-04-17 14:26:37 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUVlwWFOHCKIFUS1L5NF0rrd2xY78Z0EbDGyqD07GADqWxRP+gERV3jb2oGQ6epPduGI5hArQeoXLa7/BKUlbg==", "user"=>{"email"=>"fuckwad@hell.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  SQL (0.2ms)  BEGIN
+  User Exists (1.7ms)  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'fuckwad@hell.com' LIMIT 1
+  SQL (1.0ms)  INSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?)  [["email", "fuckwad@hell.com"], ["encrypted_password", "$2a$10$2i4kxr5AT7Rn7BUaCBg09OpWTPg9g2l6j4vB2glFsGWD9KAO..VXe"], ["created_at", "2015-04-17 18:26:37"], ["updated_at", "2015-04-17 18:26:37"]]
+   (3.6ms)  COMMIT
+  SQL (0.1ms)  BEGIN
+  SQL (1.2ms)  UPDATE `users` SET `last_sign_in_at` = ?, `current_sign_in_at` = ?, `last_sign_in_ip` = ?, `current_sign_in_ip` = ?, `sign_in_count` = ?, `updated_at` = ? WHERE `users`.`id` = ?  [["last_sign_in_at", "2015-04-17 18:26:37"], ["current_sign_in_at", "2015-04-17 18:26:37"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-04-17 18:26:37"], ["id", 1]]
+   (5.1ms)  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 167ms (ActiveRecord: 13.4ms)
+
