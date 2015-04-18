@@ -6,8 +6,10 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+ # attr_accessible :id, :email,
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+#   :confirmable, :lockable, :timeoutable and :omniauthable
 #  devise :database_authenticatable, 
 #         :recoverable, :rememberable, :trackable, :validatable,
 #	 :confirmable, :lockable, :timeoutable
@@ -20,3 +22,4 @@ class User < ActiveRecord::Base
 #  end
 
 end
+

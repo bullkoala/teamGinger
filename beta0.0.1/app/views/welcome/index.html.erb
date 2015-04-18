@@ -1,7 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Welcome to TeamGinger:</h1>
 <h1>Legend of the Five Rings database </h1>
+
+<a href = "/users/">Member List</a>
+
+<% if user_signed_in? %>
+  <%= "You are  logged in as #{current_user.email}" %>
+    <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% end %>
+
 
 <table>
   <thead>
