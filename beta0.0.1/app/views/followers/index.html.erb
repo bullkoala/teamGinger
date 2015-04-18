@@ -2,6 +2,10 @@
 
 <h1>Listing Followers</h1>
 
+<% if user_signed_in? %>
+  <%= "You are  logged in as #{current_user.email}" %>
+<% end %>
+
 <%= form_tag(followers_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Followers" %>
       <%= submit_tag "Search", :name => nil %>

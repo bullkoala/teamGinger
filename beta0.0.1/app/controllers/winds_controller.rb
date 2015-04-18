@@ -20,6 +20,15 @@ class WindsController < ApplicationController
 
   # GET /winds/1/edit
   def edit
+       respond_to do |format|
+      if @wind.update(wind_params)
+        format.html { redirect_to @wind, notice: 'Wind was successfully updated.' }
+        format.json { render :show, status: :ok, location: @wind }
+      else
+        format.html { render :edit }
+        format.json { render json: @wind.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # POST /winds
