@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   #Route for ActiveAdmin link on 'Welcome'
   get 'admin_user'	=> 'admin/dashboard#index'
 
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
