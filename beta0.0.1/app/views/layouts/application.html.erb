@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 	<title><%= full_title(yield(:title)) %></title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -11,23 +13,25 @@
 </head>
 <body>
  	<!-- Header for logo -->
-	<header class="navbar navbar-fixed-top navbar-inverse">
+	<header class="navbar navbar-fixed-top">
 		<!-- Div for logo -->
      		<div class="container">
-     		<%= link_to "sample app", '#', id: "logo" %>
-     		<nav>
      			<ul class="nav navbar-nav navbar-right">
-            		<li><%= link_to "Home",   '#' %></li>
-            		<li><%= link_to "Help",   '#' %></li>
-            		<li><%= link_to "Log in", '#' %></li>
-          		</ul>
-        	</nav>
-      	</div>
+     			<li><%= link_to "Home",   '/' , class: "btn btn-lg btn-primary"%></li>
+	  		<li><%= link_to "Admin", admin_root_path , class: "btn btn-lg btn-primary"%></li>
+	  		
+    			<% if user_signed_in? %>
+      			<li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-lg btn-primary") %></li>
+      			<li><%= "You are  logged in as #{current_user.email}" %></li>
+      		<% end %>
+    			<% if !user_signed_in? %>
+         			<li><%= link_to'Log in', new_user_session_path, class: "btn btn-lg btn-primary" %></li>
+         		<% end %>
+         	</div>
+			</ul>      	
     </header>
     <div class="container">
 	<%= yield %>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 	</div>
 	</body>
 </html>

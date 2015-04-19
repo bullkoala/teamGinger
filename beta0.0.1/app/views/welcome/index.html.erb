@@ -1,34 +1,9 @@
 <% provide(:title, "Welcome to Thunderdome, Bitch!") %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-  </head>
-
-<p id="notice"><%= notice %></p>
-
-<!--<h1>Welcome to TeamGinger:</h1>-->
 <h1>Legend of the Five Rings database </h1>
 
-<body>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-      <nav>
-	<ul class="nav navbar-nav navbar-right">
-	  <h3><li><%= link_to "Home",   '#' %></li></h3>
-	  <h3><li><%= link_to "Admin", admin_root_path %></li></h3>
-    <% if user_signed_in? %>
-      <h3><%= "You are  logged in as #{current_user.email}" %></h3>
-      <h3><li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li></h3>
-    <% else %>
-      <h3><li><%= link_to'Log in', new_user_session_path %></li></h3>
-    <% end %>
-    <h3><li><%= link_to "Member List", users_path %></li></h3>
-	</ul>
-      </nav>
-    </div>
-  </header>
-  <div class="container">
+<body>     
     <table>
       <thead>
 	<tr>
