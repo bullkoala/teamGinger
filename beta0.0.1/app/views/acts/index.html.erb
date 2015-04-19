@@ -1,18 +1,31 @@
+<% provide(:title, "Acts") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Acts</h1>
-
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-<% end %>
+<body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <nav>
+  <ul class="nav navbar-nav navbar-right">
+  <h2><% if user_signed_in? %>
+    <%= "You are  logged in as #{current_user.email}" %>
+  <% end %></h2>
+  <h3><li><%= link_to "Home",  '/' %></li></h3>
 
 <%= form_tag(acts_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Acts" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
-
-<br>
-
+  </ul>
+      </nav>
+    </div>
+  </header>
+<body>
 <table>
   <thead>
     <tr>
@@ -40,7 +53,4 @@
     <% end %>
   </tbody>
 </table>
-
-
-
-<br>
+</body>
