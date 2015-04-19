@@ -12,11 +12,17 @@
 <body>
   <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-      <%= link_to "Welcome", '#'%>
       <nav>
 	<ul class="nav navbar-nav navbar-right">
-	  <li><%= link_to "Home",   '#' %></li>
-	  <li><%= link_to "Log in", admin_user_path %></li>
+	  <h3><li><%= link_to "Home",   '#' %></li></h3>
+	  <h3><li><%= link_to "Admin", admin_user_path %></li></h3>
+    <% if user_signed_in? %>
+      <h3><%= "You are  logged in as #{current_user.email}" %></h3>
+      <h3><li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li></h3>
+    <% else %>
+      <h3><li><%= link_to'Log in', new_user_session_path %></li></h3>
+    <% end %>
+    <h3><li><%= link_to "Member List", users_path %></li></h3>
 	</ul>
       </nav>
     </div>
@@ -25,26 +31,6 @@
     <table>
       <thead>
 	<tr>
-	  <th>Searchable Card Attributes</th>
-	  <th colspan="3"></th>
-	</tr>
-      </thead>
-<h1>Legend of the Five Rings database </h1>
-
-<a href = "/users/">Member List</a>
-
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-    <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
-
-  <% else %>
-  <%= link_to('Log in', new_user_session_path) %>
-
-<% end %>
-
-
 <table>
   <thead>
     <tr>
