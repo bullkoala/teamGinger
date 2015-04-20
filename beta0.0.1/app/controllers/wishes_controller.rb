@@ -70,9 +70,12 @@ class WishesController < ApplicationController
       @wish = Wish.find(params[:id])
     end
 
+    def user_email
+      session[:user_email] = @current_user.email
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def wish_params
-      params.require(:wish).permit(:title, :url, :notes)
+      params.require(:wish).permit(:title, :url, :notes, :email)
     end
 
 
