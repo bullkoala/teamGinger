@@ -22,6 +22,11 @@ Rails.application.routes.draw do
   resources :attachments
   resources :acts
   resources :regions
+  resources :welcome, as: 'home'
+
+  #Page specific redirects
+  get '/home' => 'home/#index'
+  #, to: redirect('/')
 
   #Route for ActiveAdmin link on 'Welcome'
   get 'admin_user'	=> 'admin/dashboard#index'
@@ -32,8 +37,10 @@ Rails.application.routes.draw do
   # Site root
   get 'welcome/index'
   root 'welcome#index'
-#  get 'user/index'
-#  root 'users/#index'
+
+
+  #  get 'user/index'
+  #  root 'users/#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

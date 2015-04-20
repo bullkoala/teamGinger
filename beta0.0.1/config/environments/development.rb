@@ -25,7 +25,7 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -41,4 +41,7 @@ Rails.application.configure do
 
 #------- Required settings for Devise authentication module -------#
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+
+  #--- Configuration option to add bootstrap assets to Rails Asses Pipeline ---#
+  #config.assets.path
 end
