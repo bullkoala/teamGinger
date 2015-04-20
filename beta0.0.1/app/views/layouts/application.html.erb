@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
@@ -13,26 +13,29 @@
 </head>
 <body>
  	<!-- Header for logo -->
-	<header class="navbar navbar-fixed-top">
+	<header class="navbar navbar-static-top">
 		<!-- Div for nav bar -->
      		<div class="container">
+                                <div class="center jumbotron">
+                                    <h1>Team Ginger: Welcome to Thunderdome</h1>
+                                </div>
      			<ul class="nav navbar-nav navbar-right">
-     			<li><%= link_to "Home",   '/' , class: "btn btn-primary"%></li>
-	  			<li><%= link_to "Admin", admin_root_path , class: "btn btn-primary"%></li>
-    			<% if user_signed_in? %>
+     		                 <li><%= link_to "Home",   '/' , class: "btn btn-primary"%></li>
+	  		      <li><%= link_to "Admin", admin_root_path , class: "btn btn-primary"%></li>
+    			      <% if user_signed_in? %>
       				<li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-primary") %></li>
       				<li><%= "You are  logged in as #{current_user.email}" %></li>
-      			<% end %>
+      			      <% end %>
     			
-    			<% if !user_signed_in? %>
-         			<li><%= link_to'Log in', new_user_session_path, class: "btn btn-primary" %></li>
-         		<% end %>
-                </ul>       
-         	</div>		
-        
-    </header>
+    			      <% if !user_signed_in? %>
+         			            <li><%= link_to'Log in', new_user_session_path, class: "btn btn-primary" %></li>
+         		                 <% end %>
+                                  </ul>       
+         	            <!--/div-->		
+            </header>
     <!--div id="main-container" class="container"-->
-    <div class="container-fluid">
+    <br>
+    <!--div class="container"-->
             <div class="row">
                     <div class="col-xs-9">
                             <!-- Main table for content -->
