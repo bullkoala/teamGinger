@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+
+
   devise_for :users
 #  devise_for :users, ActiveAdmin::Devise.config
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -22,6 +25,7 @@ Rails.application.routes.draw do
   resources :attachments
   resources :acts
   resources :regions
+  resources :wishes
 
   #Route for ActiveAdmin link on 'Welcome'
   get 'admin_user'	=> 'admin/dashboard#index'

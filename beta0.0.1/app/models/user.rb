@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
  
   self.primary_key = :id
 
+  has_many :wishes
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

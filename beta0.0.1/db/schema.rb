@@ -181,6 +181,8 @@ ActiveRecord::Schema.define(version: 20150416144407) do
     t.string   "last_sign_in_ip",        limit: 255
   end
 
+  add_index "users", ["email"], name: "email", unique: true, using: :btree
+
   create_table "winds", primary_key: "title", force: :cascade do |t|
     t.integer "typeID",      limit: 1,   null: false
     t.string  "keywords",    limit: 75
@@ -188,6 +190,13 @@ ActiveRecord::Schema.define(version: 20150416144407) do
   end
 
   add_index "winds", ["typeID"], name: "typeID", using: :btree
+
+  create_table "wishes", id: false, force: :cascade do |t|
+    t.integer "id",    limit: 4
+    t.string  "title", limit: 255
+    t.string  "url",   limit: 255
+    t.string  "notes", limit: 255
+  end
 
   add_foreign_key "winds", "types", column: "typeID", primary_key: "typeID", name: "winds_ibfk_1", on_update: :cascade, on_delete: :cascade
 end
