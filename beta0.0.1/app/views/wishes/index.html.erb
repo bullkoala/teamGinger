@@ -5,6 +5,12 @@
 <table>
   <thead>
     <tr>
+    <th>Card Title</th>
+    <th>Wish Notes</th>
+    <th>View Card</th>
+    <th>View Wish</th>
+    <th>Edit Wish</th>
+    <th>Delete Wish</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +18,9 @@
   <tbody>
     <% @wishes.each do |wish| %>
       <tr>
+       <td><%= wish.title %></td>
+       <td><%= wish.notes%></td>
+       <td><%= link_to 'Card', wish.url%></td>
         <td><%= link_to 'Show', wish %></td>
         <td><%= link_to 'Edit', edit_wish_path(wish) %></td>
         <td><%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>

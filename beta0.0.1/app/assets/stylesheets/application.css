@@ -15,8 +15,8 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "admins";
-@import "users";
+/*@import "admin_users";
+@import "users";*/
 
 /* universal */
 

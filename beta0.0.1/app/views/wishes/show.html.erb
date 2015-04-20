@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Card Title:</strong>
+  <%= @wish.title %>
+</p>
+<p>
+  <strong>Wish Notes:</strong>
+  <%= @wish.notes %>
+</p>
+<p><%= link_to 'Card', @wish.url%></p>
+
 <%= link_to 'Edit', edit_wish_path(@wish) %> |
 <%= link_to 'Back', wishes_path %>

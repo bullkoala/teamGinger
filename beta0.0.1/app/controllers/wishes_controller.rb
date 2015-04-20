@@ -15,6 +15,9 @@ class WishesController < ApplicationController
   # GET /wishes/new
   def new
     @wish = Wish.new
+    #@wish.title= :title
+   # @wish.url = :url
+   # @wish.notes = :notes
   end
 
   # GET /wishes/1/edit
@@ -64,12 +67,12 @@ class WishesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_wish
-      @wish = Wish.find(params[:title])
+      @wish = Wish.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wish_params
-      params.require(params[:title]).permit(:url, :notes)
+      params.require(:wish).permit(:title, :url, :notes)
     end
 
 
