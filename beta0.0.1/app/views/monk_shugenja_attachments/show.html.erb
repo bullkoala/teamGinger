@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, @monk_shugenja_attachment.title) %>
+<% provide(:panel_title, @monk_shugenja_attachment.title)%>
+<div class="container-fluid">
 
 <p>
-  <strong>Typeid:</strong>
-  <%= @monk_shugenja_attachment.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@monk_shugenja_attachment.typeID) %>
 </p>
 
 <p>
-  <strong>Goldcost:</strong>
+  <strong>Gold Cost:</strong>
   <%= @monk_shugenja_attachment.goldCost %>
 </p>
 
@@ -27,3 +30,4 @@
 
 
 <%= link_to 'Back', monk_shugenja_attachments_path %>
+</div>

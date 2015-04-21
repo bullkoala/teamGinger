@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @type.title) %>
+<% provide(:panel_title, @type.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typename:</strong>
+  <strong>Type Name:</strong>
   <%= @type.typeName %>
 </p>
 
-
 <%= link_to 'Back', types_path %>
+</div>

@@ -1,22 +1,25 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, @holding.title) %>
+<% provide(:panel_title, @holding.title)%>
+<div class="container-fluid">
 
 <p>
-  <strong>Typeid:</strong>
-  <%= @holding.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@holding.typeID) %>
 </p>
 
 <p>
-  <strong>Goldcost:</strong>
+  <strong>Gold Cost:</strong>
   <%= @holding.goldCost %>
 </p>
 
 <p>
-  <strong>Goldproduction:</strong>
+  <strong>Gold Production:</strong>
   <%= @holding.goldProduction %>
 </p>
 
 <p>
-  <strong>Honorproduction:</strong>
+  <strong>Honor Production:</strong>
   <%= @holding.honorProduction %>
 </p>
 
@@ -32,3 +35,4 @@
 
 
 <%= link_to 'Back', holdings_path %>
+</div>

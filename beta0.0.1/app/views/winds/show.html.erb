@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @wind.title) %>
+<% provide(:panel_title, @wind.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @wind.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@wind.typeID) %>
 </p>
 
 <p>
@@ -15,5 +17,5 @@
   <%= @wind.description %>
 </p>
 
-
 <%= link_to 'Back', winds_path %>
+</div>

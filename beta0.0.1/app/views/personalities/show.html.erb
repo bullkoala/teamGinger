@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @personality.title) %>
+<% provide(:panel_title, @personality.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @personality.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@personality.typeID) %>
 </p>
 
 <p>
@@ -16,17 +18,17 @@
 </p>
 
 <p>
-  <strong>Goldcost:</strong>
+  <strong>Gold Cost:</strong>
   <%= @personality.goldCost %>
 </p>
 
 <p>
-  <strong>Familyhonorrequirement:</strong>
+  <strong>Family Honor Req'd:</strong>
   <%= @personality.familyHonorRequirement %>
 </p>
 
 <p>
-  <strong>Personalhonor:</strong>
+  <strong>Personal Honor:</strong>
   <%= @personality.personalHonor %>
 </p>
 
@@ -47,3 +49,4 @@
 
 
 <%= link_to 'Back', personalities_path %>
+</div>

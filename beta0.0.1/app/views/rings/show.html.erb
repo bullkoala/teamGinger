@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @ring.title) %>
+<% provide(:panel_title, @ring.title)%>
+<div class="container-fluid">
 <p>
   <strong>Typeid:</strong>
-  <%= @ring.typeID %>
+  <%= type_title(@ring.typeID) %>
 </p>
 
 <p>
@@ -22,3 +24,4 @@
 
 
 <%= link_to 'Back', rings_path %>
+</div>

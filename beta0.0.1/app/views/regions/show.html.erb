@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @region.title) %>
+<% provide(:panel_title, @region.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @region.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(region.typeID) %>
 </p>
 
 <p>
@@ -17,3 +19,4 @@
 
 
 <%= link_to 'Back', regions_path %>
+</div>

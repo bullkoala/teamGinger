@@ -1,22 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @sensei.title) %>
+<% provide(:panel_title, @sensei.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @sensei.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@sensei.typeID) %>
 </p>
 
 <p>
-  <strong>Provincestrength:</strong>
+  <strong>Province Strength:</strong>
   <%= @sensei.provinceStrength %>
 </p>
 
 <p>
-  <strong>Goldproduction:</strong>
+  <strong>Gold Production:</strong>
   <%= @sensei.goldProduction %>
 </p>
 
 <p>
-  <strong>Familyhonor:</strong>
+  <strong>Family Honor:</strong>
   <%= @sensei.familyHonor %>
 </p>
 
@@ -32,3 +34,4 @@
 
 
 <%= link_to 'Back', senseis_path %>
+</div>
