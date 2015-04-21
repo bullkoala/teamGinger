@@ -6,9 +6,7 @@
     <div class="container-fluid">
       <nav>
         <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-                  <p class="text-info"> <%= "You are  logged in as #{current_user.email}" %> </p>
-              <% end %>
+       
         <li><%= link_to "Home",  '/' %></li>
         <%= form_tag(acts_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Acts" %>

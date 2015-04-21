@@ -15,8 +15,13 @@
  	<!-- Header for logo -->
 	<header class="navbar navbar-fixed-top">
 		<!-- Div for logo -->
+     			<h1>Legend of the Five Rings database </h1>
+
      		<div class="container">
+     		
+
      			<ul class="nav navbar-nav navbar-right">
+
      			<li><%= link_to "Home",   '/' , class: "btn btn-xs btn-default"%></li>
      			<li><%= link_to "Members", users_path, class: "btn btn-xs btn-default"%></li>
 	  			<li><%= link_to "Admin", admin_root_path , class: "btn btn-xs btn-default"%></li>
@@ -25,6 +30,7 @@
       				<li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-xs btn-default") %></li>
       				<br>
       			<li><%= "You are  logged in as #{current_user.email}" %></li>
+      			<li><%= link_to 'Wish Lists', wishes_path %></li>
       		<% end %>
     			<% if !user_signed_in? %>
          			<li><%= link_to'Log in', new_user_session_path, class: "btn btn-xs btn-default" %></li>

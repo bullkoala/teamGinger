@@ -2,9 +2,6 @@
 
 <h1>Listing Rings</h1>
 
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-<% end %>
 
 <%= form_tag(rings_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Rings" %>
