@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, "Wishes") %>
 
-<h1>Listing Wishes</h1>
 
-<table>
+<div class="container-fluid">
+  <% provide(:panel_title, "Wishes") %>
+  <table class="table table-striped table-bordered">
   <thead>
     <tr>
     <th>Requester's Email</th>  
@@ -32,5 +34,6 @@
 </table>
 
 <br>
-
+<%if user_signed_in?%>
 <%= link_to 'New Wish', new_wish_path %>
+<%end%>

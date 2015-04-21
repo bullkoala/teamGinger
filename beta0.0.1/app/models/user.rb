@@ -23,5 +23,9 @@ class User < ActiveRecord::Base
 #    self.role ||= :user
 #  end
 
+def self.user_email
+	self.email
+end
+
 end
 

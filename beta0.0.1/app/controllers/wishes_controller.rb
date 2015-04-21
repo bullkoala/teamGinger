@@ -15,9 +15,6 @@ class WishesController < ApplicationController
   # GET /wishes/new
   def new
     @wish = Wish.new
-    #@wish.title= :title
-   # @wish.url = :url
-   # @wish.notes = :notes
   end
 
   # GET /wishes/1/edit
@@ -27,7 +24,7 @@ class WishesController < ApplicationController
   # POST /wishes
   # POST /wishes.json
   def create
-    @wish = Wish.new(wish_params)
+    @wish = Wish.create(wish_params)
 
     respond_to do |format|
       if @wish.save
@@ -70,12 +67,26 @@ class WishesController < ApplicationController
       @wish = Wish.find(params[:id])
     end
 
-    def user_email
-      session[:user_email] = @current_user.email
-    end
+    #def email
+    #  params.require(:user).permit(:current_user)
+    #  @email = user.email
+    #end
+
+      #<div class="field">
+    #<% @email = current_user.email %>
+    #<br><%= f.label :email %><br>
+    #<%= f.hidden_field(:email, :email) %>
+  #</div>
+  #<div class="field">
+   # <%=current_user.email%>
+    #</div>
+
+    #end
     # Never trust parameters from the scary internet, only allow the white list through.
     def wish_params
-      params.require(:wish).permit(:title, :url, :notes, :email)
+      #@email = "#{current_user.user_email}"
+      #params[:email] = current_user.email
+      params.require(:wish).permit(:title, :url, :notes, :email)#email: [:user_email])
     end
 
 
