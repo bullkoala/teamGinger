@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @event.title) %>
+<% provide(:panel_title, @event.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @event.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@event.typeID) %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @event.description %>
 </p>
-
-
+<hr>
 <%= link_to 'Back', events_path %>
+</div>

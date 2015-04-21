@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @follower.title) %>
+<% provide(:panel_title, @follower.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @follower.typeID %>
+  <strong>Type</strong>
+  <%= type_title(@follower.typeID) %>
 </p>
 
 <p>
@@ -16,17 +18,17 @@
 </p>
 
 <p>
-  <strong>Personalhonor:</strong>
+  <strong>Personal Honor:</strong>
   <%= @follower.personalHonor %>
 </p>
 
 <p>
-  <strong>Goldcost:</strong>
+  <strong>Gold Cost:</strong>
   <%= @follower.goldCost %>
 </p>
 
 <p>
-  <strong>Honorrequirement:</strong>
+  <strong>Honor Requirement:</strong>
   <%= @follower.honorRequirement %>
 </p>
 
@@ -44,6 +46,6 @@
   <strong>Focus:</strong>
   <%= @follower.focus %>
 </p>
-
-
+<hr>
 <%= link_to 'Back', followers_path %>
+</div>

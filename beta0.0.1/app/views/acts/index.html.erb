@@ -1,32 +1,18 @@
+<p id="notice"><%= notice %></p>
 <% provide(:title, "Acts") %>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container-fluid">
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-                  <p class="text-info"> <%= "You are  logged in as #{current_user.email}" %> </p>
-              <% end %>
-        <li><%= link_to "Home",  '/' %></li>
-        <%= form_tag(acts_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Acts" %>
-        <%= submit_tag "Search", :name => nil %>
-        <% end %>
-        </ul>
-      </nav>
-    </div>
-  </header>
-<div class="container">
-  <p class="lead bg-primary"> Acts</p>
-  <table>
+
+<div class="container-fluid">
+  <% provide(:panel_title, "Acts") %>
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
         <th>Title</th>
-        <th>Typeid</th>
-        <th>Goldcost</th>
+        <th>Type</th>
+        <th>Gold Cost</th>
         <th>Keywords</th>
         <th>Description</th>
         <th>Focus</th>
-        <th colspan="3"></th>
+        <th colspan="6"></th>
       </tr>
     </thead>
 
@@ -34,7 +20,7 @@
       <% @acts.each do |act| %>
         <tr>
           <td><%= act.title %></td>
-          <td><%= act.typeID %></td>
+          <td><%= type_title(act.typeID) %></td>
           <td><%= act.goldCost %></td>
           <td><%= act.keywords %></td>
           <td><%= act.description %></td>

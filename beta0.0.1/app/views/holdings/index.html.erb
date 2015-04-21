@@ -1,25 +1,16 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, "Holdings") %>
 
-<h1>Listing Holdings</h1>
-
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-<% end %>
-
-<%= form_tag(holdings_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Holdings" %>
-      <%= submit_tag "Search", :name => nil %>
-  <% end %>
-<br>
-
-<table>
+<div class="container-fluid">
+  <% provide(:panel_title, "Holdings") %>
+  <table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Typeid</th>
-      <th>Goldcost</th>
-      <th>Goldproduction</th>
-      <th>Honorproduction</th>
+      <th>Type</th>
+      <th>Gold Cost</th>
+      <th>Gold Production</th>
+      <th>Honor Production</th>
       <th>Keywords</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -30,7 +21,7 @@
     <% @holdings.each do |holding| %>
       <tr>
         <td><%= holding.title %></td>
-        <td><%= holding.typeID %></td>
+        <td><%= type_title(holding.typeID)%></td>
         <td><%= holding.goldCost %></td>
         <td><%= holding.goldProduction %></td>
         <td><%= holding.honorProduction %></td>
@@ -41,6 +32,4 @@
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
+</table></div>

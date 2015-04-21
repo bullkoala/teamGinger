@@ -1,31 +1,20 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, "Attachments") %>
 
-<h1>Listing Attachments</h1>
-
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-<% end %>
-
-
-<%= form_tag(attachments_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Attachments" %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
-
-<br>
-
-<table>
+<div class="container-fluid">
+  <% provide(:panel_title, "Attachments") %>
+  <table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Typeid</th>
+      <th>Type</th>
       <th>Strength</th>
       <th>Chi</th>
-      <th>Goldcost</th>
+      <th>Gold Cost</th>
       <th>Keywords</th>
       <th>Description</th>
       <th>Focus</th>
-      <th colspan="3"></th>
+      <!--th colspan="3"></th-->
     </tr>
   </thead>
 
@@ -33,7 +22,7 @@
     <% @attachments.each do |attachment| %>
       <tr>
         <td><%= attachment.title %></td>
-        <td><%= attachment.typeID %></td>
+        <td><%= type_title(attachment.typeID) %></td>
         <td><%= attachment.strength %></td>
         <td><%= attachment.chi %></td>
         <td><%= attachment.goldCost %></td>
@@ -46,7 +35,4 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-
+</div>

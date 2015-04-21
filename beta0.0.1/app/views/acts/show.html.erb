@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @act.title) %>
+<% provide(:panel_title, @act.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @act.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@act.typeID) %>
 </p>
 
 <p>
-  <strong>Goldcost:</strong>
+  <strong>Gold Cost:</strong>
   <%= @act.goldCost %>
 </p>
 
@@ -24,6 +26,7 @@
   <strong>Focus:</strong>
   <%= @act.focus %>
 </p>
-
-
+<hr>
 <%= link_to 'Back', acts_path %>
+</div>
+

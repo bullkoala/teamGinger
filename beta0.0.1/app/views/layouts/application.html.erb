@@ -13,7 +13,7 @@
                 <!--link href="images/favicon.ico" rel="icon"-->
 
                 <title><%= full_title(yield(:title)) %></title>
-                <link href="assets/css/bootstrap.min.css.scss" rel="stylesheet">
+                <link href="../assets/css/bootstrap.min.css.scss" rel="stylesheet">
                 <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
                 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
                 <%= csrf_meta_tags %>
@@ -25,53 +25,123 @@
                 <![endif]-->
                 <a href="#Top"></a>
         </head>
-        <body>
+        <body role="document">
         <!-- Header for logo -->
-         <div class="navbar navbar-fixed-top" role="navigation">
+         <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+         <!--div class="container"--> <!-- Makes the navbar fill the width of the screen -->
          <!--header class="navbar navbar-static-top"-->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <a class="navbar-brand">
+                <% if user_signed_in? %>
+                    <%= "You are  logged in as #{current_user.email}" %>
+                <% end %>
+                </a>
+                <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <%= link_to site_name, site_url, id: "ginger_logo", :class => "navbar-brand", id: "ginger_logo" %>
+                </button-->
+                
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    
-                    <li><%= link_to "Thunderdome" , root_path, id: "ginger_logo", class:"btn btn-primary btn-block" %></li>
-                    <li><%= link_to "Member List", users_path, class:"btn btn-primary btn-block" %></li>
-                </ul>
-            </div><!-- /.nav-collapse -->
-        </div><!-- /.container -->
-    </div><!-- /.navbar -->
-    <div class="center jumbotron">
-        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><%= link_to "Thunderdome" , root_path, class: "btn btn-block" %></li>
+                    <li class="active"><%= link_to "Member List", users_path, class: "btn btn-block" %></li>
+                    <li class="active"><%= link_to "Admin", admin_root_path , class: "btn btn-block"%></li>
+                    <li class="active"><%= link_to "Wishes", wishes_path , class: "btn btn-block"%></li>
+                    <li class="active">
+                        <% if user_signed_in? %>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-xs btn-block") %>
+                        <% else %>
+                            <%= link_to'Log in', new_user_session_path, class: "btn btn-xs btn-default" %>
+                        <% end %>
+                    </li>
+                    </ul>
+                </li><!-- dropdown -->
+            </ul>
+        </div><!-- /.nav-collapse -->
+    <!--/div--><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="jumbotron">
             <h1>Team Ginger: Welcome to Thunderdome</h1>
             <% if content_for?(:jumbotron) %>
                 <%= yield :jumbotron %>
             <% end %>
+    </div>
+    <hr>
+    <%if current_page?(awesome_path) %>
+        <div class="container" role="main">
+            <h2>TEAM GINGER</h2>
+            <h2>TEAM GINGER</h2>
+            <h2>TEAM GINGER</h2>
+        </div>
+    <%elsif current_page?(new_user_session_path) %>
+    <div class="container" role="main">
+        <div class="row">
+            <div class="col-lg-4">
+                <%= yield %>
+            </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <%else%>
+    <div class="container-fluid" role="main">
         <div class="row">
-            <div class="col-xs-9">
-                <!-- Main table for content -->
-                <%=yield%>
-            </div><!-- cols -->
+            <div class="col-xs-3">
+                <!-- Search Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Search</h3>
+                    </div>
+                    <div class="panel-body">
+                        <%= render :partial => 'acts/search'%>
+                        <%= render :partial => 'attachments/search'%>
+                        <%= render :partial => 'events/search'%>
+                        <%= render :partial => 'followers/search'%>
+                        <%= render :partial => 'holdings/search'%>
+                        <%= render :partial => 'monk_shugenja_attachments/search'%>
+                        <%= render :partial => 'personalities/search'%>
+                        <%= render :partial => 'regions/search'%>
+                        <%= render :partial => 'rings/search'%>
+                        <%= render :partial => 'senseis/search'%>
+                        <%= render :partial => 'strongholds/search'%>
+                        <%= render :partial => 'types/search'%>
+                        <%= render :partial => 'winds/search'%>
+                    </div>
+                </div><!-- Search Panel -->
+            </div><!-- Search Panel col -->
+            <div class="col-xs-8">
+                <!-- Main content -->
+                <!--div class="panel panel-info">
+                    <div class="panel-heading"-->
+                        <div class="container-fluid">
+                            <h1 class="text-left">
+                                <%=yield :panel_title%>
+                            </h1>
+                        </div>
+                    <!--/div-->
+                    <%=yield%>                    
+                <!--/div--><!-- Main content -->
+            </div><!-- Main content col -->
         </div><!-- row -->
     </div>
-            
-        
-        
-
+    <%end%>
+    <footer>
+        <hr>
+            <p class="pull-right">
+                <%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#' %>
+            </p>
+            <p>
+                &copy; <%= Time.now.year %> <%= site_name %> 
+                &bull;
+            </p>
+        </footer>
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.js"></script>
+        <script src="../assets/js/bootstrap.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <!-- script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
     </body>

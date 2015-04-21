@@ -23,11 +23,12 @@ Rails.application.routes.draw do
   resources :acts
   resources :regions
   resources :welcome, as: 'home'
+  resources :wishes
 
   #Page specific redirects
   get '/home' => 'home/#index'
-  #, to: redirect('/')
-
+  get '/awesome' => 'welcome#awesome_sauce'
+  
   #Route for ActiveAdmin link on 'Welcome'
   get 'admin_user'	=> 'admin/dashboard#index'
 

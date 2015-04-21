@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, @attachment.title) %>
+<% provide(:panel_title, @attachment.title)%>
+<div class="container-fluid">
 <p>
-  <strong>Typeid:</strong>
-  <%= @attachment.typeID %>
+  <strong>Type:</strong>
+  <%= type_title(@attachment.typeID) %>
 </p>
 
 <p>
@@ -16,7 +18,7 @@
 </p>
 
 <p>
-  <strong>Goldcost:</strong>
+  <strong>Gold Cost:</strong>
   <%= @attachment.goldCost %>
 </p>
 
@@ -36,3 +38,4 @@
 </p>
 
 <%= link_to 'Back', attachments_path %>
+</div>

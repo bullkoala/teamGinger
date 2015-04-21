@@ -1,0 +1,4 @@
+<%= form_tag(monk_shugenja_attachments_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Monk Attachments" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>

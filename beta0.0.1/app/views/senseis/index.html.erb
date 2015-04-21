@@ -1,25 +1,16 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, "Senseis") %>
 
-<h1>Listing Senseis</h1>
-
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-<% end %>
-
-<%= form_tag(senseis_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Senseis" %>
-      <%= submit_tag "Search", :name => nil %>
-  <% end %>
-<br>
-
-<table>
+<div class="container-fluid">
+  <% provide(:panel_title, "Senseis") %>
+  <table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Typeid</th>
-      <th>Provincestrength</th>
-      <th>Goldproduction</th>
-      <th>Familyhonor</th>
+      <th>Type</th>
+      <th>Province Strength</th>
+      <th>Gold Production</th>
+      <th>Family Honor</th>
       <th>Keywords</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -30,7 +21,7 @@
     <% @senseis.each do |sensei| %>
       <tr>
         <td><%= sensei.title %></td>
-        <td><%= sensei.typeID %></td>
+        <td><%= type_title(sensei.typeID) %></td>
         <td><%= sensei.provinceStrength %></td>
         <td><%= sensei.goldProduction %></td>
         <td><%= sensei.familyHonor %></td>
@@ -42,5 +33,4 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
+</div>

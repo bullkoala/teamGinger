@@ -1,22 +1,13 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, "Rings") %>
 
-<h1>Listing Rings</h1>
-
-<% if user_signed_in? %>
-  <%= "You are  logged in as #{current_user.email}" %>
-<% end %>
-
-<%= form_tag(rings_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Rings" %>
-      <%= submit_tag "Search", :name => nil %>
-  <% end %>
-<br>
-
-<table>
+<div class="container-fluid">
+  <% provide(:panel_title, "Rings") %>
+  <table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Typeid</th>
+      <th>Type</th>
       <th>Keywords</th>
       <th>Description</th>
       <th>Focus</th>
@@ -28,7 +19,7 @@
     <% @rings.each do |ring| %>
       <tr>
         <td><%= ring.title %></td>
-        <td><%= ring.typeID %></td>
+        <td><%= type_title(ring.typeID)%></td>
         <td><%= ring.keywords %></td>
         <td><%= ring.description %></td>
         <td><%= ring.focus %></td>
@@ -38,5 +29,4 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
+</div>
