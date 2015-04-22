@@ -2,6 +2,7 @@
 
 <html lang="eng">
         <head>
+                <link href="../assets/css/bootstrap.min.css.scss" rel="stylesheet">
                 <p class="notice"><%= notice %></p>
                 <p class="alert"><%= alert %></p>
                 <meta charset="utf-8">
@@ -13,8 +14,6 @@
                 <!-- Tab icon path -->
                 <!--link href="images/favicon.ico" rel="icon"-->
 
-                <title><%= full_title(yield(:title)) %></title>
-                <link href="../assets/css/bootstrap.min.css.scss" rel="stylesheet">
                 <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
                 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
                 <%= csrf_meta_tags %>
@@ -24,31 +23,33 @@
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
                 <![endif]-->
+                <title><%= full_title(yield(:title)) %></title>
                 <a href="#Top"></a>
         </head>
         <body role="document">
         <!-- Header for logo -->
          <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-         <!--div class="container"--> <!-- Makes the navbar fill the width of the screen -->
+         <div class="container-fluid"> <!-- Makes the navbar fill the width of the screen -->
          <!--header class="navbar navbar-static-top"-->
             <div class="navbar-header">
-            <a class="navbar-brand">
-                <% if user_signed_in? %>
-                    <%= "You are  logged in as #{current_user.email}" %>
-                <% end %>
-                </a>
-                <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="collapsed-nav-menu">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button-->
-                
+                </button>
+                <a class="navbar-brand">
+                    <% if user_signed_in? %>
+                        <%= "You are  logged in as #{current_user.email}" %>
+                    <% else %>
+                            Team Ginger
+                    <% end %>
+                </a>                
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse collapse" id="collapsed-nav-menu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><%= link_to "Thunderdome" , root_path, class: "btn btn-block" %></li>
-                    <li class="active"><%= link_to "Member List", users_path, class: "btn btn-block" %></li>
+                    <li class="active"><%= link_to root_path, class: "btn btn-block" %><span class="sr-only">(current)</span></li>
+                    <li class="active"><%= link_to "Members List", users_path, class: "btn btn-block" %></li>
                     <li class="active"><%= link_to "Admin", admin_root_path , class: "btn btn-block"%></li>
                     <li class="active"><%= link_to "Wishes", wishes_path , class: "btn btn-block"%></li>
                     <li class="active">
