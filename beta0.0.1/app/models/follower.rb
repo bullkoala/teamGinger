@@ -1,7 +1,7 @@
 class Follower < ActiveRecord::Base
+	belongs_to :type
 
 	def self.search(query)
-	  where("title like ?", "%#{query}%")
+		where("title like ?", "%#{query}%")
 	end
- 
 end

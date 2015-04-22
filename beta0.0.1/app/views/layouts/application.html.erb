@@ -14,8 +14,8 @@
                 <!-- Tab icon path -->
                 <!--link href="images/favicon.ico" rel="icon"-->
 
-                <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-                <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+                <%= stylesheet_link_tag    "application", media: "all"%><!--#, "data-turbolinks-track" => true %>-->
+                <%= javascript_include_tag "application"%><!--#, "data-turbolinks-track" => true %>-->
                 <%= csrf_meta_tags %>
 
                 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,11 +28,11 @@
         </head>
         <body role="document">
         <!-- Header for logo -->
-         <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+         <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
          <div class="container-fluid"> <!-- Makes the navbar fill the width of the screen -->
          <!--header class="navbar navbar-static-top"-->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="collapsed-nav-menu">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-nav-menu">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -40,31 +40,30 @@
                 </button>
                 <a class="navbar-brand">
                     <% if user_signed_in? %>
-                        <%= "You are  logged in as #{current_user.email}" %>
+                        <%=link_to "You are  logged in as: #{current_user.email}",  current_user%>"
                     <% else %>
-                            Team Ginger
+                        <%=link_to "Team Ginger", root_path %>
                     <% end %>
                 </a>                
             </div>
-            <div class="collapse navbar-collapse collapse" id="collapsed-nav-menu">
+            <!-- Container to hold nav for toggling -->
+            <div class="collapse navbar-collapse" id="collapsed-nav-menu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><%= link_to root_path, class: "btn btn-block" %><span class="sr-only">(current)</span></li>
+                    <li class="active"><%= link_to "Thunderdome", root_path, class: "btn btn-block" %></li>
                     <li class="active"><%= link_to "Members List", users_path, class: "btn btn-block" %></li>
                     <li class="active"><%= link_to "Admin", admin_root_path , class: "btn btn-block"%></li>
                     <li class="active"><%= link_to "Wishes", wishes_path , class: "btn btn-block"%></li>
                     <li class="active">
                         <% if user_signed_in? %>
-                            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-xs btn-block") %>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-block") %>
                         <% else %>
-                            <%= link_to'Log in', new_user_session_path, class: "btn btn-xs btn-default" %>
+                            <%= link_to'Log in', new_user_session_path, class: "btn btn-block" %>
                         <% end %>
                     </li>
-                    </ul>
-                </li><!-- dropdown -->
             </ul>
         </div><!-- /.nav-collapse -->
-    <!--/div--><!-- /.container -->
-    </nav><!-- /.navbar -->
+    </div><!-- /.container -->
+    </div><!-- /.navbar -->
 
     <div class="jumbotron">
             <h1>Team Ginger: Welcome to Thunderdome</h1>

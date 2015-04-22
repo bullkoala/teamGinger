@@ -1,6 +1,7 @@
 class Sensei < ActiveRecord::Base
-  def self.search(query)
-  	where("title like ?", "%#{query}%")
-  end
- 
-end
+	belongs_to :type
+
+	def self.search(query)
+		where("title like ?", "%#{query}%")
+	end
+ end
