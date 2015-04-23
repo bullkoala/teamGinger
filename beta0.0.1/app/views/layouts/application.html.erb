@@ -70,6 +70,7 @@
                 <%= yield :jumbotron %>
             <% end %>
     </div>
+    <p id="notice"><%= notice %></p>
     <hr>
     <%if current_page?(awesome_path) %>
         <div class="container" role="main">
@@ -88,29 +89,20 @@
     <%else%>
     <div class="container-fluid" role="main">
         <div class="row">
-            <div class="col-xs-3">
+
+        <% if user_signed_in? %>
+            <div class="col-lg-3">
                 <!-- Search Panel -->
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Search</h3>
+                        <h3 class="panel-title">Wishlist</h3>
                     </div>
                     <div class="panel-body">
-                        <%= render :partial => 'acts/search'%>
-                        <%= render :partial => 'attachments/search'%>
-                        <%= render :partial => 'events/search'%>
-                        <%= render :partial => 'followers/search'%>
-                        <%= render :partial => 'holdings/search'%>
-                        <%= render :partial => 'monk_shugenja_attachments/search'%>
-                        <%= render :partial => 'personalities/search'%>
-                        <%= render :partial => 'regions/search'%>
-                        <%= render :partial => 'rings/search'%>
-                        <%= render :partial => 'senseis/search'%>
-                        <%= render :partial => 'strongholds/search'%>
-                        <%= render :partial => 'types/search'%>
-                        <%= render :partial => 'winds/search'%>
+                        <%= render :partial => 'wishes/user_wishlist'%>
                     </div>
                 </div><!-- Search Panel -->
             </div><!-- Search Panel col -->
+            <%end%>
             <div class="col-xs-8">
                 <!-- Main content -->
                 <!--div class="panel panel-info">

@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
 <% provide(:title, "Events") %>
 
 <div class="container-fluid">
   <% provide(:panel_title, "Events") %>
+    <hr>
+  <%= render 'search' %>
+  <hr>
   <table class="table table-striped table-bordered">
   <thead>
     <tr>

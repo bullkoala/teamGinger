@@ -1,0 +1,5 @@
+class ChangeActsColumn < ActiveRecord::Migration
+  def change
+    rename_column(:acts, :typeID, :type_id)
+  end
+end

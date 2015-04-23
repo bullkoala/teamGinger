@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407141239) do
+ActiveRecord::Schema.define(version: 20150421010320) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -55,24 +55,6 @@ ActiveRecord::Schema.define(version: 20150407141239) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "admins", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "attachments", primary_key: "title", force: :cascade do |t|
     t.integer "typeID",      limit: 1,   null: false
@@ -212,12 +194,16 @@ ActiveRecord::Schema.define(version: 20150407141239) do
 
   add_index "winds", ["typeID"], name: "typeID", using: :btree
 
-  create_table "wishes", id: false, force: :cascade do |t|
-    t.integer "id",    limit: 4
-    t.string  "title", limit: 255
-    t.string  "url",   limit: 255
-    t.string  "notes", limit: 255
+  create_table "wishes", force: :cascade do |t|
+    t.string  "title",   limit: 255
+    t.string  "url",     limit: 255
+    t.string  "notes",   limit: 255
+    t.integer "user_id", limit: 4
+    t.string  "email",   limit: 255
   end
+
+  add_index "wishes", ["email"], name: "index_wishes_on_email", using: :btree
+  add_index "wishes", ["user_id"], name: "index_wishes_on_user_id", using: :btree
 
   add_foreign_key "acts", "types", column: "typeID", primary_key: "typeID", name: "acts_ibfk_1", on_update: :cascade, on_delete: :cascade
   add_foreign_key "attachments", "types", column: "typeID", primary_key: "typeID", name: "attachments_ibfk_1", on_update: :cascade, on_delete: :cascade

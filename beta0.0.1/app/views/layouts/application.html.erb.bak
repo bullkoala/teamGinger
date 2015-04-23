@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="eng">
         <head>
+                <link href="../assets/css/bootstrap.min.css.scss" rel="stylesheet">
                 <p class="notice"><%= notice %></p>
                 <p class="alert"><%= alert %></p>
                 <meta charset="utf-8">
@@ -10,14 +12,10 @@
                 <meta name="author" content="<%= meta_author %>">
                 <meta name="Keywords" content="<%= meta_keywords %>">
                 <!-- Tab icon path -->
-                <!-- <link rel="icon" href="../../favicon.ico"> -->
+                <!--link href="images/favicon.ico" rel="icon"-->
 
-                <title><%= full_title(yield(:title)) %></title>
-                <!-- Custom styles for this template -->
-                <link href="jumbotron.css" rel="stylesheet">
-
-                <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-                <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+                <%= stylesheet_link_tag    "application", media: "all"%><!--#, "data-turbolinks-track" => true %>-->
+                <%= javascript_include_tag "application"%><!--#, "data-turbolinks-track" => true %>-->
                 <%= csrf_meta_tags %>
 
                 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,128 +23,130 @@
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
                 <![endif]-->
+                <title><%= full_title(yield(:title)) %></title>
                 <a href="#Top"></a>
-</head>
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to site_name, site_url, :class => "navbar-brand" %>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+        </head>
+        <body role="document">
+        <!-- Header for logo -->
+         <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+         <div class="container-fluid"> <!-- Makes the navbar fill the width of the screen -->
+         <!--header class="navbar navbar-static-top"-->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-nav-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <% if user_signed_in? %>
+                        <%=link_to "You are  logged in as: #{current_user.email}",  current_user%>"
+                    <% else %>
+                        <%=link_to "Team Ginger", root_path %>
+                    <% end %>
+                </a>                
             </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
+            <!-- Container to hold nav for toggling -->
+            <div class="collapse navbar-collapse" id="collapsed-nav-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><%= link_to "Thunderdome", root_path, class: "btn btn-block" %></li>
+                    <li class="active"><%= link_to "Members List", users_path, class: "btn btn-block" %></li>
+                    <li class="active"><%= link_to "Wishlist", wishes_path , class: "btn btn-block"%></li>
+                    <li class="active">
+                        <% if user_signed_in? %>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-block") %>
+                        <% else %>
+                            <%= link_to'Log in', new_user_session_path, class: "btn btn-block" %>
+                        <% end %>
+                    </li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+    </div><!-- /.navbar -->
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <% if current_page?(root_path) %>
-        <% if content_for?(:jumbotron) %>
-            <div class="jumbotron">
-                <div class="container">
-                    <%= yield :jumbotron %>
-                </div>
-            </div>
-        <% end %>
-        <% else %>
-            <div class="container">
-    <% end %>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; &copy; <%= Time.now.year %><%= site_name %>
-        <%= link_to "Privacy", privacy_path %></li>
-        <%= link_to "Terms", terms_path %></li>
-        </p>
-        <%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#Top' %>
-
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
-<!-- PREV CODE 
-<body>
- 	<!-- Header for logo -->
-	<!--<header class="navbar navbar-static-top">
-		<!-- Div for nav bar -->
-     	<!--	<div class="container">
-                                <div class="center jumbotron">
-                                    <h1>Team Ginger: Welcome to Thunderdome</h1>
-                                </div>
-     			<ul class="nav navbar-nav navbar-right">
-     		                 <li><%=# link_to "Home",   '/' , class: "btn btn-primary"%></li>
-	  		      <li><%=# link_to "Admin", admin_root_path , class: "btn btn-primary"%></li>
-    			      <%# if user_signed_in? %>
-      				<li><%=# link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-primary") %></li>
-      				<li><%=# "You are  logged in as #{current_user.email}" %></li>
-      			      <%# end %>
-    			
-    			      <%# if !user_signed_in? %>
-         			            <li><%=# link_to'Log in', new_user_session_path, class: "btn btn-primary" %></li>
-         		                 <%# end %>
-                                  </ul>       
-         	            <!--/div-->		
-            <!--</header>
-    <!--div id="main-container" class="container"-->
-    
-    <!--div class="container"-->
-    <!--        <div class="row">
-                    <div class="col-xs-9">
-                            <!-- Main table for content -->
-                            <%=#yield%>
-             <!--       </div>
-                    <div class="col-xs-3">
-                          <!-- Sidebar -->
-                          <!--<%=# link_to "Thunderdome" , root_path, id: "ginger_logo", class:"btn btn-primary btn-lg btn-block" %>
-                          <%=# link_to "Member List", users_path, class:"btn btn-primary btn-lg btn-block" %>
-                    <!--</div>
-            </div>
+    <div class="jumbotron">
+            <h1>Team Ginger: Welcome to Thunderdome</h1>
+            <% if content_for?(:jumbotron) %>
+                <%= yield :jumbotron %>
+            <% end %>
     </div>
-</body>
-</html> -->
+    <hr>
+    <%if current_page?(awesome_path) %>
+        <div class="container" role="main">
+            <h2>TEAM GINGER</h2>
+            <h2>TEAM GINGER</h2>
+            <h2>TEAM GINGER</h2>
+        </div>
+    <%elsif current_page?(new_user_session_path) %>
+    <div class="container" role="main">
+        <div class="row">
+            <div class="col-lg-4">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+    <%else%>
+    <div class="container-fluid" role="main">
+        <div class="row">
+        <% if user_signed_in? %>
+            <div class="col-xs-3">
+                <!-- Search Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Search</h3>
+                    </div>
+                    <div class="panel-body">
+                        <%= render :partial => 'acts/search'%>
+                        <%= render :partial => 'attachments/search'%>
+                        <%= render :partial => 'events/search'%>
+                        <%= render :partial => 'followers/search'%>
+                        <%= render :partial => 'holdings/search'%>
+                        <%= render :partial => 'monk_shugenja_attachments/search'%>
+                        <%= render :partial => 'personalities/search'%>
+                        <%= render :partial => 'regions/search'%>
+                        <%= render :partial => 'rings/search'%>
+                        <%= render :partial => 'senseis/search'%>
+                        <%= render :partial => 'strongholds/search'%>
+                        <%= render :partial => 'types/search'%>
+                        <%= render :partial => 'winds/search'%>
+                    </div>
+                </div><!-- Search Panel -->
+            </div><!-- Search Panel col -->
+            <%end%>
+            <div class="col-xs-8">
+                <!-- Main content -->
+                <!--div class="panel panel-info">
+                    <div class="panel-heading"-->
+                        <div class="container-fluid">
+                            <h1 class="text-left">
+                                <%=yield :panel_title%>
+                            </h1>
+                        </div>
+                    <!--/div-->
+                    <%=yield%>                    
+                <!--/div--><!-- Main content -->
+            </div><!-- Main content col -->
+        </div><!-- row -->
+    </div>
+    <%end%>
+    <footer>
+        <hr>
+            <p class="pull-right">
+                <%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#' %>
+            </p>
+            <p>
+                &copy; <%= Time.now.year %> <%= site_name %> 
+                &bull;
+            </p>
+
+            <p class="pull-left active"><%= link_to "Admin", new_admin_user_session_path%></p>
+        </footer>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <!-- script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
+    </body>
+</html>

@@ -1,0 +1,14 @@
+  <table class="table">
+  <tbody>
+  <% @wishes = Wish.all %>
+    <% @wishes.each do |wish| %>
+    <%if wish.email = current_user.email %>
+      <tr>
+       <td><%= wish.email %></td> 
+       <td><%= wish.title %></td>
+        <td><%= link_to 'View', wish %></td>
+      </tr>
+      <%end %>
+    <% end %>
+  </tbody>
+</table>

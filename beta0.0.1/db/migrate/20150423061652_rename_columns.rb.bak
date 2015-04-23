@@ -1,0 +1,16 @@
+class RenameColumns < ActiveRecord::Migration
+  def change
+    rename_column(:attachments, :typeID, :type_id)
+    rename_column(:events, :typeID, :type_id)
+    rename_column(:followers, :typeID, :type_id)
+    rename_column(:holdings, :typeID, :type_id)
+    rename_column(:monk_shugenja_attachments, :typeID, :type_id)
+    rename_column(:personalities, :typeID, :type_id)
+    rename_column(:regions, :typeID, :type_id)
+    rename_column(:rings, :typeID, :type_id)
+    rename_column(:senseis, :typeID, :type_id)
+    rename_column(:strongholds, :typeID, :type_id)
+    rename_column(:types, :typeID, :type_id)
+    rename_column(:winds, :typeID, :type_id)
+  end
+end

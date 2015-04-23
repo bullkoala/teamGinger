@@ -11,7 +11,6 @@ class ActsController < ApplicationController
   # GET /acts/1
   # GET /acts/1.json
   def show
-    set_card(@act)
   end
 
   # GET /acts/new
@@ -62,15 +61,6 @@ class ActsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def index
-    if params[:search]
-      @acts = Act.search(params[:search]).order('title DESC')
-    else
-      @acts = Act.all.order('title DESC')
-    end
-  end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

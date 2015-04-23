@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  act_id: 1
+  attachment_id: 1
+  event_id: 1
+  follower_id: 1
+  holding_id: 1
+  monk_shugenja_attachment_id: 1
+  personality_id: 1
+  region_id: 1
+  ring_id: 1
+  sensei_id: 1
+  stronghold_id: 1
+  type_id: 1
+  wind_id: 1
+
+two:
+  act_id: 1
+  attachment_id: 1
+  event_id: 1
+  follower_id: 1
+  holding_id: 1
+  monk_shugenja_attachment_id: 1
+  personality_id: 1
+  region_id: 1
+  ring_id: 1
+  sensei_id: 1
+  stronghold_id: 1
+  type_id: 1
+  wind_id: 1

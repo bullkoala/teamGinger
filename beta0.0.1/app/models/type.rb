@@ -1,6 +1,5 @@
 class Type < ActiveRecord::Base
 
-
 #has_many :acts, inverse_of:  :type, 
 #	class_name: "Acts",
 #	foreign_key: "typeID"

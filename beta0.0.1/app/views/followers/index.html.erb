@@ -1,8 +1,11 @@
-<p id="notice"><%= notice %></p>
+
 <% provide(:title, "Followers") %>
 
 <div class="container-fluid">
   <% provide(:panel_title, "Followers") %>
+    <hr>
+  <%= render 'search' %>
+  <hr>
   <table class="table table-striped table-bordered">
 
   <thead>
