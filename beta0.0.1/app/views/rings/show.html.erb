@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @ring.title) %>
 <% provide(:panel_title, @ring.title)%>
+
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Typeid:</strong>
   <%= type_title(@ring.typeID) %>
@@ -21,7 +24,15 @@
   <strong>Focus:</strong>
   <%= @ring.focus %>
 </p>
-
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_ring_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
 <%= link_to 'Back', rings_path %>
+</div>
+</div>
 </div>

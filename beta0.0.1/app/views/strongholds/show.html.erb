@@ -2,6 +2,8 @@
 <% provide(:title, @stronghold.title) %>
 <% provide(:panel_title, @stronghold.title)%>
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type:</strong>
   <%= type_title(@stronghold.typeID) %>
@@ -36,7 +38,15 @@
   <strong>Clan:</strong>
   <%= @stronghold.clan %>
 </p>
-
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_stronghold_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
 <%= link_to 'Back', strongholds_path %>
+</div>
+</div>
 </div>

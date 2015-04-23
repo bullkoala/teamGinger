@@ -4,7 +4,7 @@
 <div class="container-fluid">
 <p>
   <strong>Type:</strong>
-  <%= type_title(region.typeID) %>
+  <%= type_title(@region.typeID) %>
 </p>
 
 <p>
@@ -17,6 +17,15 @@
   <%= @region.description %>
 </p>
 
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_region_wish' %>
+</div>
+<%end%>
+<hr> 
+<div class="col-xs-8">       
 <%= link_to 'Back', regions_path %>
+</div>
+</div>
 </div>

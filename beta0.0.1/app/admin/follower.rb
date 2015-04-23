@@ -13,6 +13,21 @@ ActiveAdmin.register Follower do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+    form do |f|
+    f.inputs "Follower Details" do
+      f.input :title
+      f.input :typeID
+      f.input :strength
+      f.input :chi
+      f.input :personalHonor
+      f.input :goldCost
+      f.input :honorRequirement
+      f.input :keywords
+      f.input :description
+      f.input :focus
+            
+    end
+    f.actions
+  end
 
 end

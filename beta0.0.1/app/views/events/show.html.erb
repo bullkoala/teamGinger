@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @event.title) %>
 <% provide(:panel_title, @event.title)%>
+
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type:</strong>
   <%= type_title(@event.typeID) %>
@@ -11,6 +14,15 @@
   <strong>Description:</strong>
   <%= @event.description %>
 </p>
-<hr>
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_event_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
 <%= link_to 'Back', events_path %>
+</div>
+</div>
 </div>

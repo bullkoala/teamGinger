@@ -13,6 +13,13 @@ ActiveAdmin.register Event do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+    form do |f|
+    f.inputs "Event Details" do
+      f.input :title
+      f.input :typeID
+      f.input :description
+    end
+    f.actions
+  end
 
 end

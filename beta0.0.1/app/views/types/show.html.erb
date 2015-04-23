@@ -1,11 +1,23 @@
 <p id="notice"><%= notice %></p>
-<% provide(:title, @type.title) %>
-<% provide(:panel_title, @type.title)%>
+<% provide(:title, @type.typeName) %>
+<% provide(:panel_title, @type.typeName)%>
+
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type Name:</strong>
   <%= @type.typeName %>
 </p>
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_type_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
 <%= link_to 'Back', types_path %>
+</div>
+</div>
 </div>

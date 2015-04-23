@@ -2,6 +2,8 @@
 <% provide(:title, @personality.title) %>
 <% provide(:panel_title, @personality.title)%>
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type:</strong>
   <%= type_title(@personality.typeID) %>
@@ -47,6 +49,15 @@
   <%= @personality.clan %>
 </p>
 
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_personality_wish' %>
+</div>
+<%end%>
+<hr> 
+<div class="col-xs-8">      
 <%= link_to 'Back', personalities_path %>
+</div>
+</div>
 </div>

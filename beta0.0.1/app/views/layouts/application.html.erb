@@ -51,8 +51,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><%= link_to "Thunderdome", root_path, class: "btn btn-block" %></li>
                     <li class="active"><%= link_to "Members List", users_path, class: "btn btn-block" %></li>
-                    <li class="active"><%= link_to "Admin", admin_root_path , class: "btn btn-block"%></li>
-                    <li class="active"><%= link_to "Wishes", wishes_path , class: "btn btn-block"%></li>
+                    <li class="active"><%= link_to "Wishlist", wishes_path , class: "btn btn-block"%></li>
                     <li class="active">
                         <% if user_signed_in? %>
                             <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-block") %>
@@ -137,6 +136,8 @@
                 &copy; <%= Time.now.year %> <%= site_name %> 
                 &bull;
             </p>
+
+            <p class="pull-left active"><%= link_to "Admin", new_admin_user_session_path%></p>
         </footer>
         <!-- Bootstrap core JavaScript
         ================================================== -->

@@ -13,6 +13,17 @@ ActiveAdmin.register Ring do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+    form do |f|
+    f.inputs "Ring Details" do
+      f.input :title
+      f.input :typeID
+      f.input :keywords
+      f.input :description
+      f.input :focus
+      
+    end
+    f.actions
+  end
 
 
 end

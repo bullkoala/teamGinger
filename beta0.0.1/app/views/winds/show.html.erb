@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @wind.title) %>
 <% provide(:panel_title, @wind.title)%>
+
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type:</strong>
   <%= type_title(@wind.typeID) %>
@@ -16,6 +19,14 @@
   <strong>Description:</strong>
   <%= @wind.description %>
 </p>
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_wind_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
 <%= link_to 'Back', winds_path %>
+</div>
 </div>

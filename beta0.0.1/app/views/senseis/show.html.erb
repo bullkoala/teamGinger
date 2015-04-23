@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @sensei.title) %>
 <% provide(:panel_title, @sensei.title)%>
+
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type:</strong>
   <%= type_title(@sensei.typeID) %>
@@ -31,7 +34,15 @@
   <strong>Description:</strong>
   <%= @sensei.description %>
 </p>
-
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_sensei_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
 <%= link_to 'Back', senseis_path %>
+</div>
+</div>
 </div>

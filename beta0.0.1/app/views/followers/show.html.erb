@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @follower.title) %>
 <% provide(:panel_title, @follower.title)%>
+
 <div class="container-fluid">
-<p>
+        <div class="row">
+            <div class="col-lg-8"><p>
   <strong>Type</strong>
   <%= type_title(@follower.typeID) %>
 </p>
@@ -46,6 +48,16 @@
   <strong>Focus:</strong>
   <%= @follower.focus %>
 </p>
+
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_follower_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
 <hr>
 <%= link_to 'Back', followers_path %>
+</div>
+</div>
 </div>

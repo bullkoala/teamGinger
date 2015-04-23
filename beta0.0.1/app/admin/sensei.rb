@@ -13,6 +13,18 @@ ActiveAdmin.register Sensei do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+    form do |f|
+    f.inputs "Sensei Details" do
+      f.input :title
+      f.input :typeID
+      f.input :provinceStrength
+      f.input :goldProduction
+      f.input :familyHonor
+      f.input :keywords
+      f.input :description
+      
+    end
+    f.actions
+  end
 
 end

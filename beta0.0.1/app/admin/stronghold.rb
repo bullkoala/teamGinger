@@ -13,6 +13,20 @@ ActiveAdmin.register Stronghold do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+    form do |f|
+    f.inputs "Stronghold Details" do
+      f.input :title
+      f.input :typeID
+      f.input :provinceStrength
+      f.input :familyHonor
+      f.input :goldProduction
+      f.input :keywords
+      f.input :description
+      f.input :clan
+      
+    end
+    f.actions
+  end
 
 
 end

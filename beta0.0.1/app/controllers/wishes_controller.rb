@@ -14,11 +14,7 @@ class WishesController < ApplicationController
 
   # GET /wishes/new
   def new
-    if params[:add_wish]
-      @wish = Wish.create(wish_params)
-    else
       @wish = Wish.new  
-    end
   end
 
   # GET /wishes/1/edit

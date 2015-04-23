@@ -27,8 +27,6 @@ Rails.application.routes.draw do
   #Page specific redirects
   get '/home' => 'home/#index'
   get '/awesome' => 'welcome#awesome_sauce'
-  get '/add_wish' => 'wishes/#add'
-  post '/add_wish' => 'wish/#add'
   
   #Route for ActiveAdmin link on 'Welcome'
   get 'admin_user'	=> 'admin/dashboard#index'

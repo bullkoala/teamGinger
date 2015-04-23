@@ -13,6 +13,22 @@ ActiveAdmin.register Personality do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+      form do |f|
+    f.inputs "Personality Details" do
+      f.input :title
+      f.input :typeID
+      f.input :strength
+      f.input :chi
+      f.input :goldCost
+      f.input :familyHonorRequirement
+      f.input :personalHonor
+      f.input :keywords
+      f.input :description
+      f.input :clan
+      
+    end
+    f.actions
+  end
 
 
 end

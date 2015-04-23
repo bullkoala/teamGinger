@@ -14,6 +14,19 @@ ActiveAdmin.register MonkShugenjaAttachment do
   #   permitted
   # end
 
+      form do |f|
+    f.inputs "Monk Shugenja Attachment Details" do
+      f.input :title
+      f.input :typeID
+      f.input :keywords
+      f.input :description
+      f.input :focus
+      f.input :goldCost
+      
+    end
+    f.actions
+  end
+
 
 end
 

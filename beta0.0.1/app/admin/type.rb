@@ -13,6 +13,13 @@ ActiveAdmin.register Type do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+    form do |f|
+    f.inputs "Type Details" do
+      f.input :typeName
+      f.input :typeID
+    end
+    f.actions
+  end
 
 
 end

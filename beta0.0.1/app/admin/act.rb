@@ -12,7 +12,17 @@ ActiveAdmin.register Act do
   #   permitted = [:permitted, :attributes]
   #   permitted << :other if resource.something?
   #   permitted
-  # end
-
+  # end  
+  form do |f|
+    f.inputs "Act Details" do
+      f.input :title
+      f.input :typeID
+      f.input :goldCost
+      f.input :keywords
+      f.input :description
+      f.input :focus
+    end
+    f.actions
+  end
 
 end

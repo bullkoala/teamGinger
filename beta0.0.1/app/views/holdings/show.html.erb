@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @holding.title) %>
 <% provide(:panel_title, @holding.title)%>
+
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 
 <p>
   <strong>Type:</strong>
@@ -33,6 +36,14 @@
   <%= @holding.description %>
 </p>
 
-
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_holding_wish' %>
+</div>
+<%end%>
+</hr>
 <%= link_to 'Back', holdings_path %>
+</div>
+</div>
 </div>

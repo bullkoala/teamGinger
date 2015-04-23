@@ -3,73 +3,37 @@
 <% provide(:panel_title, @act.title)%>
 
 <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
 <p>
   <strong>Type:</strong>
   <%= type_title(@act.typeID) %>
 </p>
-
 <p>
   <strong>Gold Cost:</strong>
   <%= @act.goldCost %>
 </p>
-
 <p>
   <strong>Keywords:</strong>
   <%= @act.keywords %>
 </p>
-
 <p>
   <strong>Description:</strong>
   <%= @act.description %>
 </p>
-
 <p>
   <strong>Focus:</strong>
   <%= @act.focus %>
 </p>
-<hr>
-<% if current_user %>
-    <%= form_for(@wish) do |f| %>
-      <% if @wish.errors.any? %>
-        <div id="error_explanation">
-        <h2><%= pluralize(@wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
-        <ul>
-          <% @wish.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= @act.title %>
-    <%= f.hidden_field(:title, value: card.title) %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= card.url %>
-    <%= f.hidden_field(:url, value: card.url) %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br>
-    <%= f.text_field :notes %>
-  </div>
-  <div class="field">
-    <br><%= f.label :email %><br>
-        <%= current_user.email%>
-    <%= f.hidden_field(:email, value: current_user.email) %>
-  </div>
-  <div class="field">
-    <%=current_user.email%>
-    </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <%end%>
-
-<div class="btn-group" role="group" aria-label="Add to wishlist, home">
-
-  <%= link_to 'Back', acts_path%>
+</div>
+<%if user_signed_in?%>
+<div class="col-lg-8">
+<%= render 'add_act_wish' %>
+</div>
+<%end%>
+<div class="col-xs-8">
+<hr>        
+<%= link_to 'Back', acts_path %>
+</div>
 </div>
 </div>
