@@ -2,6 +2,7 @@
   <% if @wish.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
+
       <ul>
       <% @wish.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -9,14 +10,17 @@
       </ul>
     </div>
   <% end %>
-    
+
+  <% @card = self %>
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= @card.title = %>
+    <%= f.hidden_field(:title, value: @card.title) %>
   </div>
   <div class="field">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= @card.url = %>
+    <%= f.hidden_field(:url, value: @card.url %>
   </div>
   <div class="field">
     <%= f.label :notes %><br>
@@ -24,6 +28,7 @@
   </div>
   <div class="field">
     <br><%= f.label :email %><br>
+        <%=current_user.email%>
     <%= f.hidden_field(:email, value: current_user.email) %>
   </div>
   <div class="field">
@@ -32,9 +37,4 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-
-
-
-
-  
 <% end %>

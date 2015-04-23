@@ -1,6 +1,6 @@
 class ActsController < ApplicationController
   # before_action :set_act, only: [:show, :edit, :update, :destroy]
-  before_action :set_act, only: [:show]
+  before_action :set_act, only: [:show, :add_wish, :set_wish]
 
   # GET /acts
   # GET /acts.json
@@ -11,6 +11,7 @@ class ActsController < ApplicationController
   # GET /acts/1
   # GET /acts/1.json
   def show
+    set_card(@act)
   end
 
   # GET /acts/new
